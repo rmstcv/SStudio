@@ -1,0 +1,335 @@
+
+* {
+
+  /* font-family: "Segoe UI", Arial, sans-serif; */
+  font-family: "Space Mono", "SFMono-Regular", "Consolas", "Courier New", monospace;
+}
+
+.no-wrap {
+  white-space: nowrap; 
+}
+
+
+body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: #242729;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  max-width: 1920px;
+}
+.container {
+
+  height: 100%;
+  margin: 0 auto;
+  background-color: #242729;
+  color: #ffffffe6;
+}
+.main_menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #2a2d2f;
+}
+.menu_item{
+  padding: 10px;
+  cursor: pointer
+}
+
+.side_menu_item {
+  padding-left: 20px;
+  padding-right: 10px;
+  cursor: pointer
+}
+
+.menu_item:hover{
+  background-color: #ffffff10;
+}
+
+.side_menu_item:hover{
+  background-color: #ffffff26;
+}
+
+.header_nav_item__active, .side_nav_item__active {
+  color:darksalmon ;
+}
+
+.side_nav_item__active {
+  background-color: #ffffff26;
+  color:darksalmon ;
+}
+
+a {
+  pointer-events: none;
+  text-decoration: none;
+  color: lightskyblue;
+
+}
+
+input {
+  position: absolute;
+  z-index: -1;
+}
+
+input:checked + label > .menu_item{
+  background-color: #69747a;
+}
+
+.content_item {
+ color: white;
+}
+
+.descr {
+  cursor: pointer;
+}
+
+.content_item_prop {
+  display: block;
+  color: red;
+}
+
+.content_item_prop_none {
+  display: none;
+}
+
+.container_main {
+  display: flex;
+}
+
+.container_side {
+
+  min-width: 200px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  background-color: #2a2d2f;
+  max-width: 300px;
+}
+
+.container_content {
+
+  background-color: #232729;
+
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.open {
+  cursor: pointer;
+}
+
+.main_item {
+  width: 80%;
+}
+
+.main_item__active {
+  background-color: #ffffff14;
+}
+
+.main_item__active > .main_item_name:first-child {
+  color: darksalmon;
+
+}
+
+
+
+.main_item_name:hover {
+  background-color: #69747a;
+  cursor: pointer;
+}
+
+.main_item_descr {
+  color: white;
+  width: 80%;
+}
+
+.main_item_descr:first-child > .obj_name {
+  color: darksalmon;
+  font-size: larger;
+}
+
+.obj_descr {
+  margin-top: 10px;
+}
+
+.obj_descr::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: #fff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.obj_info {
+  margin-top: 10px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  max-width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+  word-wrap: break-word;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.popup {
+  min-width: fit-content;
+  position: absolute;
+  background-color: black;
+  color: lightskyblue;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  padding: 0 5px 0 5px;
+  margin: 0;
+}
+
+.Argument, .Summary{
+  color: lightskyblue;
+}
+
+.codeblock, .syntaxblock, .code{
+  background-color: rgb(56, 56, 56);
+  font-size: small; 
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  background-color: rgb(56, 56, 56);
+}
+
+h1, h2 {
+  font-size: larger;
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+/* Общие сбросы и баз */
+* { box-sizing: border-box; }
+html,body { height: 100%; margin: 0; font-family: "Space Mono", "Segoe UI", Arial, sans-serif; background:#242729; color:#e6eef2; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* Структура */
+.container_main { display:flex; gap:16px; padding:16px; }
+.container_side { min-width:200px; max-width:300px; height:100vh; overflow:auto; background:#2a2d2f; padding:12px; }
+.container_content { flex:1; background:#232729; padding:20px; overflow:auto; }
+
+/* Код-блок */
+.codeblock-wrapper {
+  margin: 16px 0;
+  background: #383838;
+  border-radius: 6px;
+  padding: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+/* pre: моноширинный шрифт, горизонтальная прокрутка */
+pre.codeblock {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #e6e6e6;
+  font-family: "Space Mono", "SFMono-Regular", "Consolas", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre;       /* сохраняет пробелы и переносы */
+  overflow-x: auto;       /* горизонтальная прокрутка при длинных строках */
+  tab-size: 4;
+    word-break: normal;
+  word-wrap: normal;
+}
+
+/* Для очень длинных идентификаторов без пробелов */
+.codeblock { 
+  word-break: normal; 
+  word-wrap: normal; 
+  overflow: auto;
+}
+
+code {
+  color: #ccc;
+  background: transparent;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;            /* сохраняет пробелы и табы */
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  -moz-tab-size: 4;            /* для Firefox */
+  overflow-x: auto;            /* горизонтальная прокрутка при длинных строках */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;                  /* убирает внутренний отступ, если нужен — задайте явно */
+  margin: 0;
+}
+
+.clickBtn {
+  float: left;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  background-color: #ccc;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.clickBtn:hover {
+  background-color: #cccccc81;
+}
+
+.textblock {
+  white-space: pre; 
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  padding-left: 20px;
+}
+
+/* Адаптив: показывать горизонтальную прокрутку обёртки */
+@media (max-width: 768px) {
+  .codeblock-wrapper { overflow-x: auto; }
+  .container_main { flex-direction: column; }
+  .container_side { height: auto; max-height: 300px; }
+}
+
