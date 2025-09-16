@@ -1,7 +1,7 @@
-import {allPagesData} from './obj_data.js'
+import {allPagesData} from './obj_data.js';
 // import {funcData} from './obj_data_func.js'
 
-const allData = [...allPagesData]
+const allData = [...allPagesData];
 // const allData = [...allPagesData, ...funcData]
 
 // function getObj(obj) {
@@ -50,10 +50,10 @@ function getObj(obj) {
     allData.forEach((dataObj) => {
         
         if (`${createObjectFromValues(dataObj).id}` === obj) {
-            targetObj = dataObj
+            targetObj = dataObj;
         }
     }) 
-    return targetObj
+    return targetObj;
 }
 
 // function getDescr(obj) {
@@ -71,13 +71,13 @@ function getObj(obj) {
 // }
 
 function getDescr(obj) {
-    let mokup = ''
+    let mokup = '';
         mokup = `
         <div class="obj_descr">
             ${obj.descr}
         </div>
     `  
-    return mokup
+    return mokup;
 }
 
 function createObjectFromValues(obj = {}) {
@@ -85,4 +85,4 @@ function createObjectFromValues(obj = {}) {
     return { id, name, sub, descr };
 }
 
-export {setHash, getObj, getDescr}
+export {setHash, getObj, getDescr};

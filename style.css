@@ -133,13 +133,12 @@ input:checked + label > .menu_item{
   width: 80%;
 }
 
-.main_item__active {
+/* .main_item__active {
   background-color: #ffffff14;
-}
+} */
 
 .main_item__active > .main_item_name:first-child {
   color: darksalmon;
-
 }
 
 
@@ -258,6 +257,7 @@ html,body { height: 100%; margin: 0; font-family: "Space Mono", "Segoe UI", Aria
   background: #383838;
   border-radius: 6px;
   padding: 12px;
+  padding-top: 0;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
 }
@@ -286,6 +286,7 @@ pre.codeblock {
 }
 
 code {
+  display: block;
   color: #ccc;
   background: transparent;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -308,7 +309,7 @@ code {
 .clickBtn {
   float: left;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #ccc;
   border-style: none;
   cursor: pointer;
