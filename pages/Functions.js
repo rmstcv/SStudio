@@ -1,8 +1,9 @@
-import globalVars from "../globalVars.js"
+import globalVars from "../globalVars.js";
 
 let data_descr = `
 В Функции добавить
-${globalVars.codeTagOpen}function AnswerExistsAny(qTarget, codes) {
+${globalVars.codeTagOpen}
+function AnswerExistsAny(qTarget, codes) {
     let check = false;
     let arr_codes = codes.split(",");
     arr_codes.forEach(code => {
@@ -73,15 +74,14 @@ function addImages(Q, name, placement) {
         A.image = images[name + A.code];
         A.imagePlacement = placement ? placement : ImagePlacementIds.Default;
     }
-}
-${globalVars.codeTagClose}
-`
+}${globalVars.codeTagClose}
+`;
 
 let dataFunctions = {
     id: "Functions",
-    name: "Обязательно добавить функции",
+    name: "Добавить функции",
     sub: "",
     descr: data_descr
-}
+};
 
-export { dataFunctions }
+export { dataFunctions };

@@ -1,8 +1,8 @@
-import globalVars from "../globalVars.js"
+import globalVars from "../globalVars.js";
 
 const data_descr = `
     Тестирование
-`
+`;
 const data_descr_TestingStart = `
 Тестирование в браузере (кнопка <b>Запуск</b>):<br>
 <img src="images/testLink.jpg" alt="testLink " width="300">
@@ -10,7 +10,7 @@ const data_descr_TestingStart = `
 <br>
 Тестирование в приложении (кнопка <b>Start test survey</b>):<br>
 <img src="images/testLinkApp.jpg" alt="testLink " width="300">
-`
+`;
 
 const data_descr_TestingFuncIsTesting = `
 Для того, что бы показать вопрос только в тестовом режиме необходимо добавить функцию в Скрипты -> Функции :
@@ -30,7 +30,7 @@ ${globalVars.codeTagClose}
 ${globalVars.codeTagOpen}
 return testAnswered(Q);
 ${globalVars.codeTagClose}
-`
+`;
 
 const data_descr_TestingVarName = `
 Глобальный скрипт перед показом:
@@ -46,7 +46,7 @@ if (isTesting()) {
     }
 }
 ${globalVars.codeTagClose}
-`
+`;
 
 const data_descr_TestingGoTo = ` 
 ${globalVars.codeTagOpen}
@@ -59,14 +59,14 @@ if (isTesting()) {
     return qGlobalName(b_dummy) // переход к вопросу b_dummy
 }
 ${globalVars.codeTagClose}
-`
+`;
 
 const TestingStart = {id:'TestingStart', name:'Тестирование анкеты', sub:'', descr: data_descr_TestingStart};
 const TestingFuncIsTesting = {id:'TestingFuncIsTesting', name:'Тестовый экран', sub:'', descr: data_descr_TestingFuncIsTesting};
 const TestingVarName = {id:'TestingVarName', name:'Показывать имя (шаблон) вопроса в режиме тестирования анкеты', sub:'', descr: data_descr_TestingVarName};
 const TestingGoTo = {id:'TestingGoTo', name:'Переход к вопросу (аналог goToSkok)', sub:'', descr: data_descr_TestingGoTo};
 
-const subs = "TestingStart, TestingFuncIsTesting, TestingVarName, TestingGoTo"
+const subs = "TestingStart, TestingFuncIsTesting, TestingVarName, TestingGoTo";
 const Testing = {id: "Testing", name: "Тестирование", sub: subs, descr: data_descr};
 
 const TestingPage = [

@@ -1,2 +1,1 @@
-import "./view.js"
-//test
+import "./view.js";

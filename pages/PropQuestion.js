@@ -1,7 +1,7 @@
-import globalVars from "../globalVars.js"
+import globalVars from "../globalVars.js";
 
 let data_descr = `
-${globalVars.texTagOpen}   
+${globalVars.texTagOpen}
 number
 type
 text
@@ -51,13 +51,13 @@ rightTitle
 leftTitleLocalizations
 rightTitleLocalization
 ${globalVars.textTagClose}
-`
+`;
 
 let PropQuestion = {
     id: "PropQuestion",
     name: "Свойства и функции вопроса",
     sub: "",
     descr: data_descr
-}
+};
 
-export { PropQuestion }
+export { PropQuestion };
