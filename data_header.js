@@ -13,11 +13,14 @@ const HEADER_NAV_ITEMS = [
     obj_id: "propAndFunc",
     object_name: "Свойства и функции",
     descr: "description",
-      properties: `
+    properties: `
       PropGlobal,
       PropQuestion,
-      PropResponse
-      `
+      PropAnswer,
+      PropAnswerList,
+      PropRow,
+      PropRowList
+    `
   },
 ];
 

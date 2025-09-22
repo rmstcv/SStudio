@@ -1,7 +1,9 @@
-import globalVars from "../globalVars.js";
+import globalVars from "../../globalVars.js";
 
 let data_descr = 
-`${globalVars.codeTextTagOpen}questions[2] // вопрос Q2
+`${globalVars.titleTextTagOpen}Глобальные объекты, функции и переменные${globalVars.titleTextTagClose}
+${globalVars.codeTextTagOpen}
+questions[2] // вопрос Q2
 ${globalVars.codeTextTagClose}
 ${globalVars.textTagOpen}
 Объект questions.
@@ -86,7 +88,7 @@ ${globalVars.textTagClose}
 
 let PropGlobal = {
     id: "PropGlobal",
-    name: "Глобальные объекты, функции и переменные",
+    name: "Global",
     sub: "",
     descr: data_descr
 };

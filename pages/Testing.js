@@ -67,7 +67,12 @@ const TestingVarName = {id:'TestingVarName', name:'Показывать имя (
 const TestingGoTo = {id:'TestingGoTo', name:'Переход к вопросу (аналог goToSkok)', sub:'', descr: data_descr_TestingGoTo};
 
 const subs = "TestingStart, TestingFuncIsTesting, TestingVarName, TestingGoTo";
-const Testing = {id: "Testing", name: "Тестирование", sub: subs, descr: data_descr};
+const Testing = {
+    id: "Testing", 
+    name: "Тестирование", 
+    sub: subs, 
+    descr: data_descr
+};
 
 const TestingPage = [
     Testing,
