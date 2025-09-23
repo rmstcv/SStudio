@@ -13,6 +13,7 @@
 --code-bg: #0a0d12;
 /* --mono: "Inter", "Space Mono", "SFMono-Regular", Consolas, "Courier New", monospace; */
 --mono: "Space Mono", "SFMono-Regular", "Consolas", "Courier New", monospace;
+--monoCode: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 --base-font-size: 15px;
 --radius: 8px;
 --shadow-1: 0 6px 18px rgba(2,6,23,0.6);
@@ -117,7 +118,7 @@ pre.codeblock{ margin:0; padding:12px; background:transparent; color:#dbeafe; fo
 display:block;
 color:#cbd5e1;
 background:transparent;
-font-family:var(--mono);
+font-family:var(--monoCode);
 /* font-size:0.95rem; */
 font-size:0.9rem;
 white-space:pre;

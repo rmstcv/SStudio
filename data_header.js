@@ -1,17 +1,7 @@
 const HEADER_NAV_ITEMS = [
   {
-    obj_id: "START",
-    object_name: "Быстрый старт",
-    descr: "description",
-    properties: `
-      Functions,
-      AgeRecode,
-      Testing
-    `
-  },
-  {
-    obj_id: "propAndFunc",
-    object_name: "Свойства и функции",
+    obj_id: "PropAndFunc",
+    object_name: "Глобальные объекты",
     descr: "description",
     properties: `
       PropGlobal,
@@ -22,6 +12,30 @@ const HEADER_NAV_ITEMS = [
       PropRowList,
       PropColumn,
       PropColumnList
+    `
+  },
+    {
+    obj_id: "HowTo",
+    object_name: "Как сделать",
+    descr: "description",
+    properties: `
+      AgeRecode
+    `
+  },
+    {
+    obj_id: "SurveyTest",
+    object_name: "Тестирование анкеты",
+    descr: "description",
+    properties: `
+      Testing
+    `
+  },
+    {
+    obj_id: "Scripts",
+    object_name: "Скрипты",
+    descr: "description",
+    properties: `
+      Functions
     `
   },
 ];
