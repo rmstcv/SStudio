@@ -221,9 +221,10 @@ function addMainListener() {
     };
 
     if (e.target.classList.contains("clickBtn")) {
-      let elemForCopy = e.target.closest(".codeblock").querySelector("code");
+      let elemForCopy = e.target.previousElementSibling;
 
-      if (elemForCopy) {
+      if (elemForCopy && elemForCopy.classList.contains('codeblock')) {
+        
         navigator.clipboard.writeText(elemForCopy.textContent);
       };
     };
@@ -325,7 +326,7 @@ initPage(hash);
 initListeners();
 
 function addCopyButton () {
-  const elemsForButton = document.querySelectorAll(".codeblock");
+  const elemsForButton = document.querySelectorAll(".codeblock-wrapper");
 
   if (elemsForButton) {
     elemsForButton.forEach((elem) => {
