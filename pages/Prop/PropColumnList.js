@@ -1,22 +1,16 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = 
-`${globalVars.titleTextTagOpen}Свойства и функции списка ответов
+`${globalVars.titleTextTagOpen}Свойства и функции списка колонок табличного вопроса
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
-Q.answers.
+Q.columns.
     count
     visibleCount
     getAll()
     getCodes()
     getVisibleCodes()
     getVisible()
-    getCheckedCodes()
-    getChecked()
-    getCheckedOrderedCodes()
-    getCheckedOrdered()
-    getCheckedCode(true)
-    isChecked(code)
     showAll()
     show(code, codes, answer, row, column)
     showOnly(code, codes, answer, row, column)
@@ -42,17 +36,17 @@ Q.answers.
     insert(refCode, code, text)
     insertAfter(refCode, code, text)
     remove(code)
-    remove(answer)
+    remove(column)
     load(fromQuestion)
     load(fromList)
 ${globalVars.textTagClose}
 `;
 
-let PropAnswerList = {
-    id: "PropAnswerList",
-    name: "Answers",
+let PropColumnList = {
+    id: "PropColumnList",
+    name: "Columns",
     sub: "",
     descr: data_descr
 };
 
-export { PropAnswerList };
+export { PropColumnList };

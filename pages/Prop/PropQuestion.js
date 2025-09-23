@@ -1,14 +1,13 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = 
-`${globalVars.titleTextTagOpen}Свойства и функции вопроса${globalVars.titleTextTagClose}
-${globalVars.codeTextTagOpen}
-let question1 = Q; // используя параметр Q, который передается в скрипты перед показом и после ответа на вопрос
+`${globalVars.titleTextTagOpen}Свойства и функции вопроса
+${globalVars.titleTextTagClose}
+${globalVars.codeTextTagOpen}let question1 = Q; // используя параметр Q, который передается в скрипты перед показом и после ответа на вопрос
 let question1 = Q1; // используя глобальные переменные
 let question1 = questions[1]; // используя объект questions
 ${globalVars.codeTextTagClose}
-${globalVars.textTagOpen}
-Q.
+${globalVars.textTagOpen}Q.
     number
     type
     text

@@ -19,7 +19,9 @@ const HEADER_NAV_ITEMS = [
       PropAnswer,
       PropAnswerList,
       PropRow,
-      PropRowList
+      PropRowList,
+      PropColumn,
+      PropColumnList
     `
   },
 ];

@@ -1,7 +1,8 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = 
-`${globalVars.titleTextTagOpen}Свойства и функции строк табличного вопроса${globalVars.titleTextTagClose}
+`${globalVars.titleTextTagOpen}Свойства и функции строк табличного вопроса
+${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 Q.rows.
     count

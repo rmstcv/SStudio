@@ -1,12 +1,12 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = 
-`${globalVars.titleTextTagOpen}Свойства и функции строки табличного вопроса${globalVars.titleTextTagClose}
-${globalVars.codeTextTagOpen}
-let row3 = Q23.rows[3].answers[1]; // табличный вопрос с единственным или множественным выбором
+`${globalVars.titleTextTagOpen}Свойства и функции строки табличного вопроса
+${globalVars.titleTextTagClose}
+${globalVars.codeTextTagOpen}let row3 = Q23.rows[3].answers[1]; // табличный вопрос с единственным или множественным выбором
 let row4 = Q23.rows[4].answer; // табличный числовой или текстовый вопрос
-${globalVars.codeTextTagClose}${globalVars.textTagOpen}
-Q.rows[code].
+${globalVars.codeTextTagClose}
+${globalVars.textTagOpen}Q.rows[code].
     code
     text
     textLocalizations

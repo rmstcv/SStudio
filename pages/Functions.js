@@ -1,9 +1,7 @@
 import globalVars from "../globalVars.js";
 
-let data_descr = `
-В Функции добавить
-${globalVars.codeTagOpen}
-function AnswerExistsAny(qTarget, codes) {
+let data_descr = `${globalVars.textTagOpen}В Функции добавить${globalVars.textTagClose}
+${globalVars.codeTagOpen}function AnswerExistsAny(qTarget, codes) {
     let check = false;
     let arr_codes = codes.split(",");
     arr_codes.forEach(code => {

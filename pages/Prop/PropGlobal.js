@@ -1,12 +1,11 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = 
-`${globalVars.titleTextTagOpen}Глобальные объекты, функции и переменные${globalVars.titleTextTagClose}
-${globalVars.codeTextTagOpen}
-questions[2] // вопрос Q2
+`${globalVars.titleTextTagOpen}Глобальные объекты, функции и переменные
+${globalVars.titleTextTagClose}
+${globalVars.codeTextTagOpen}questions[2] // вопрос Q2
 ${globalVars.codeTextTagClose}
-${globalVars.textTagOpen}
-Объект questions.
+${globalVars.textTagOpen}Объект questions.
     count
     getNumbers()
     getNumbers(qnFrom, qnTo)
