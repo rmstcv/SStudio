@@ -222,9 +222,8 @@ function addMainListener() {
 
     if (e.target.classList.contains("clickBtn")) {
       let elemForCopy = e.target.previousElementSibling;
-
+      
       if (elemForCopy && elemForCopy.classList.contains('codeblock')) {
-        
         navigator.clipboard.writeText(elemForCopy.textContent);
       };
     };
@@ -326,14 +325,14 @@ initPage(hash);
 initListeners();
 
 function addCopyButton () {
-  const elemsForButton = document.querySelectorAll(".codeblock-wrapper");
+  const elemsForButton = document.querySelectorAll(".codeblock");
 
   if (elemsForButton) {
     elemsForButton.forEach((elem) => {
-    const copyButton = document.createElement('button');
-    copyButton.textContent = 'copy';
-    copyButton.classList.add("clickBtn");
-    elem.appendChild(copyButton);
+      const copyButton = document.createElement('button');
+      copyButton.textContent = 'copy';
+      copyButton.classList.add("clickBtn");
+      elem.insertAdjacentElement('afterend', copyButton);
     });
   };
 };
