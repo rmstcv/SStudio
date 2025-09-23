@@ -3,8 +3,8 @@ import globalVars from "../globalVars.js";
 let data_descr = `
 В скрипт после показа вопроса S2 с возрастом добавить
 ${globalVars.codeTagOpen}
-let age = S2.openValueInt
-if (age < 20 || age > 60) return screenOut()
+let age = S2.openValueInt;
+if (age < 20 || age > 60) return screenOut();
 ${globalVars.codeTagClose}
 В скрипт перед показом в вопрос s2_recode добавить
 ${globalVars.codeTagOpen}

@@ -1,9 +1,7 @@
 import globalVars from "../globalVars.js";
 
-let data_descr = `
-В Функции добавить
-${globalVars.codeTagOpen}
-function AnswerExistsAny(qTarget, codes) {
+let data_descr = `${globalVars.textTagOpen}В Функции добавить${globalVars.textTagClose}
+${globalVars.codeTagOpen}function AnswerExistsAny(qTarget, codes) {
     let check = false;
     let arr_codes = codes.split(",");
     arr_codes.forEach(code => {
@@ -19,16 +17,16 @@ function testAnswered(Q) {
         return ok;
     } else {
         return answered;
-    }
-}
+    };
+};
 
 function screenOut() {
     if (isTesting()) {
         return error('Тестовое интервью! Выход по скринауту.');
     } else {
         return exitWithResult(InterviewResult.Screening);
-    }
-}
+    };
+};
 
 function AnswerExistsAny(qTarget, codes) {
     let check = false;
@@ -37,7 +35,7 @@ function AnswerExistsAny(qTarget, codes) {
         if (qTarget.isChecked(parseInt(code))) check = true;
     });
     return check;
-}
+};
 
 function addImages(Q, name, placement) {
     let objName;
@@ -64,7 +62,7 @@ function addImages(Q, name, placement) {
 
         default:
             return;
-    }
+    };
 
     if (name === undefined) name = '';
 
@@ -73,8 +71,9 @@ function addImages(Q, name, placement) {
 
         A.image = images[name + A.code];
         A.imagePlacement = placement ? placement : ImagePlacementIds.Default;
-    }
-}${globalVars.codeTagClose}
+    };
+};
+${globalVars.codeTagClose}
 `;
 
 let dataFunctions = {

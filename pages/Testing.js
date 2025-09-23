@@ -22,8 +22,8 @@ function testAnswered(Q) {
         return ok;
     } else {
         return answered;
-    }
-}
+    };
+};
 ${globalVars.codeTagClose}
 В Вопросе в <b>скрипты перед показом</b> вызвать функцию:<br><br>
 
@@ -42,9 +42,9 @@ if (isTesting()) {
 
         if (Q.text.indexOf(tmp) == -1) {
             Q.text = '&lt;font color=&quot;gray&quot;&gt;' + tmp + '&lt;/font&gt;&lt;br /&gt;' + Q.text;
-        }
-    }
-}
+        };
+    };
+};
 ${globalVars.codeTagClose}
 `;
 
@@ -54,10 +54,10 @@ if (isTesting()) {
     informationTextAdd('TEST MODE')
         function qGlobalName(alias) {
             return question(alias.number)
-        }
-    q2_1.answers[1].checked = true // выбрать ответ в вопросе q2_1
-    return qGlobalName(b_dummy) // переход к вопросу b_dummy
-}
+        };
+    q2_1.answers[1].checked = true; // выбрать ответ в вопросе q2_1
+    return qGlobalName(b_dummy); // переход к вопросу b_dummy
+};
 ${globalVars.codeTagClose}
 `;
 
@@ -67,7 +67,12 @@ const TestingVarName = {id:'TestingVarName', name:'Показывать имя (
 const TestingGoTo = {id:'TestingGoTo', name:'Переход к вопросу (аналог goToSkok)', sub:'', descr: data_descr_TestingGoTo};
 
 const subs = "TestingStart, TestingFuncIsTesting, TestingVarName, TestingGoTo";
-const Testing = {id: "Testing", name: "Тестирование", sub: subs, descr: data_descr};
+const Testing = {
+    id: "Testing", 
+    name: "Тестирование", 
+    sub: subs, 
+    descr: data_descr
+};
 
 const TestingPage = [
     Testing,
