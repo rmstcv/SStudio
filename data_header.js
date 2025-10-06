@@ -19,7 +19,9 @@ const HEADER_NAV_ITEMS = [
     object_name: "Как сделать",
     descr: "description",
     properties: `
-      AgeRecode
+      AgeRecode,
+      ShowPrevChecked,
+      CheckPrevChecked
     `
   },
     {
@@ -35,7 +37,16 @@ const HEADER_NAV_ITEMS = [
     object_name: "Скрипты",
     descr: "description",
     properties: `
-      Functions
+      Functions,
+      AnswerExistsOnly
+    `
+  },
+      {
+    obj_id: "JSstandard",
+    object_name: "JS",
+    descr: "description",
+    properties: `
+      
     `
   },
 ];

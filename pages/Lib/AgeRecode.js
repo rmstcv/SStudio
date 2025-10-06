@@ -1,12 +1,16 @@
-import globalVars from "../globalVars.js";
+import globalVars from "../../globalVars.js";
 
-let data_descr = `
+let data_descr = `${globalVars.titleTextTagOpen}
+Перекодировка возраста
+${globalVars.titleTextTagClose}
+${globalVars.textTagOpen}
 В скрипт после показа вопроса S2 с возрастом добавить
+${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
 let age = S2.openValueInt;
 if (age < 20 || age > 60) return screenOut();
-${globalVars.codeTagClose}
-В скрипт перед показом в вопрос s2_recode добавить
+${globalVars.codeTagClose}${globalVars.textTagOpen}В скрипт перед показом в вопрос s2_recode добавить
+${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
 let age = S2.openValueInt;
 

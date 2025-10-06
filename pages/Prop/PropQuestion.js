@@ -4,8 +4,9 @@ let data_descr =
 `${globalVars.titleTextTagOpen}Свойства и функции вопроса
 ${globalVars.titleTextTagClose}
 ${globalVars.codeTextTagOpen}let question1 = Q; // используя параметр Q, который передается в скрипты перед показом и после ответа на вопрос
-let question1 = Q1; // используя глобальные переменные
-let question1 = questions[1]; // используя объект questions
+let question2 = Q2; // используя глобальные переменные
+let question3 = questions[3]; // используя объект questions
+let question4 = q_1; // используя шаблон
 ${globalVars.codeTextTagClose}
 ${globalVars.textTagOpen}Q.
     number
