@@ -1,10 +1,14 @@
 //Functions
 import { dataFunctions } from "./pages/Func/Functions.js";
 import { AnswerExistsOnly } from "./pages/Func/AnswerExistsOnly.js";
+
 //Lib
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
 import { ShowPrevChecked } from "./pages/Lib/ShowPrevChecked.js";
 import { CheckPrevChecked } from "./pages/Lib/CheckPrevChecked.js";
+import { ShowOnlyCodesByCode } from "./pages/Lib/ShowOnlyCodesByCode.js";
+import { VarSubstitution } from "./pages/Lib/VarSubstitution.js";
+import { AddImages } from "./pages/Lib/AddImages.js";
 
 //Testing
 import { TestingPage } from "./pages/Testing.js";
@@ -27,7 +31,10 @@ const FunctionsData = [
 const LibData = [
     AgeRecode,
     ShowPrevChecked,
-    CheckPrevChecked
+    CheckPrevChecked,
+    ShowOnlyCodesByCode,
+    VarSubstitution,
+    AddImages
 ];
 
 const PropData = [

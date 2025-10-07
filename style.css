@@ -132,6 +132,11 @@ line-height:1.5;
 /* Text */
 .textblock{ color:var(--text); white-space:pre-wrap; font-family:var(--monoCode);}
 .textblock_title{ font-size:1.05rem; color:var(--text); font-weight:700; }
+.textblock_sub{    
+font-size: small;
+line-height: 1;
+color: var(--muted);
+}
 
 /* Buttons */
 .clickBtn{

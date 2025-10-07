@@ -36,15 +36,23 @@ const data_descr_TestingVarName = `
 Глобальный скрипт перед показом:
 ${globalVars.codeTagOpen}
 if (isTesting()) {
-    let tmp = Q.outputColumnTemplate;
-    if (tmp !== undefined) {
-        tmp = tmp.replace(/([._]|){\d}|'/g, '');
 
-        if (Q.text.indexOf(tmp) == -1) {
-            Q.text = '&lt;font color=&quot;gray&quot;&gt;' + tmp + '&lt;/font&gt;&lt;br /&gt;' + Q.text;
-        };
-    };
-};
+    let numTempl = Q.outputColumnTemplate
+
+    if (numTempl !== undefined && numTempl.includes("{3}")) {
+        numTempl = numTempl.replace("{3}", Q.number % 10)
+    }
+    
+    let numOrig = Q.number
+    let tmp = '&lt;font color=&quot;gray&quot;&gt;' + 'Q' + numOrig + ' [' + numTempl + ']'+ '&lt;/font&gt;&lt;br /&gt;';
+    let textQ = Q.text
+     
+    if (textQ.includes(tmp)) {
+        textQ = textQ.replace(tmp, "")
+    }
+    Q.text  = tmp + textQ 
+}
+       
 ${globalVars.codeTagClose}
 `;
 
@@ -58,6 +66,7 @@ if (isTesting()) {
     q2_1.answers[1].checked = true; // выбрать ответ в вопросе q2_1
     return qGlobalName(b_dummy); // переход к вопросу b_dummy
 };
+
 ${globalVars.codeTagClose}
 `;
 

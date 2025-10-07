@@ -1,7 +1,7 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = `${globalVars.titleTextTagOpen}
-Проверить, если в вопросе отмеченны только определенные коды
+Проверить, если в вопросе отмечены только определенные коды
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 В качестве второго аргумента функция принимает массив кодов
@@ -32,7 +32,7 @@ ${globalVars.codeTagClose}
 
 let AnswerExistsOnly = {
     id: "AnswerExistsOnly",
-    name: "Показать выбранные в..",
+    name: "Если отмечены только коды..",
     sub: "",
     descr: data_descr 
 };

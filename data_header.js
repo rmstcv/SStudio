@@ -21,7 +21,10 @@ const HEADER_NAV_ITEMS = [
     properties: `
       AgeRecode,
       ShowPrevChecked,
-      CheckPrevChecked
+      CheckPrevChecked,
+      ShowOnlyCodesByCode,
+      VarSubstitution,
+      AddImages
     `
   },
     {
