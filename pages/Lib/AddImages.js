@@ -21,11 +21,11 @@ Q.row[5].image = images['Лого1'];
 Q.row[5].image = Q34[5].image;
 ${globalVars.codeTextTagClose}
 ${globalVars.textTagOpen}
-Через функцию:
+В ответ через функцию:
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}
-addImages(Q); // когда в названии есть только код (просто число: 1, 2…, 46…)
-addImages(Q, 'Лого_'); // можно добавлять в название перед кодом какой-либо идентификатор
+addImages(Q); // когда в названии есть только код (подставит во все ответы изображения: 1, 2...)
+addImages(Q, 'Лого_'); // можно добавлять в название перед кодом какой-либо идентификатор (подставит в ответы изображения: Лого_1, Лого_2 ...)
 addImages(Q, 'Лого_', ImagePlacementIds.Right); // в функцию можно передать и расположение картинок относительно текста
 ${globalVars.codeTextTagClose}
 ${globalVars.codeTagOpen}

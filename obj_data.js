@@ -9,6 +9,8 @@ import { CheckPrevChecked } from "./pages/Lib/CheckPrevChecked.js";
 import { ShowOnlyCodesByCode } from "./pages/Lib/ShowOnlyCodesByCode.js";
 import { VarSubstitution } from "./pages/Lib/VarSubstitution.js";
 import { AddImages } from "./pages/Lib/AddImages.js";
+import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
+import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
 
 //Testing
 import { TestingPage } from "./pages/Testing.js";
@@ -34,7 +36,9 @@ const LibData = [
     CheckPrevChecked,
     ShowOnlyCodesByCode,
     VarSubstitution,
-    AddImages
+    AddImages,
+    RotationAnswers,
+    ResultsOfScriptExec
 ];
 
 const PropData = [

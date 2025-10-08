@@ -57,7 +57,7 @@ ${globalVars.codeTagClose}
 
 let ShowOnlyCodesByCode = {
     id: "ShowOnlyCodesByCode",
-    name: "Фильтровать ответы по выбранному..",
+    name: "Фильтровать ответы..",
     sub: "",
     descr: data_descr 
 };

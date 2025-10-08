@@ -24,7 +24,9 @@ const HEADER_NAV_ITEMS = [
       CheckPrevChecked,
       ShowOnlyCodesByCode,
       VarSubstitution,
-      AddImages
+      AddImages,
+      RotationAnswers,
+      ResultsOfScriptExec
     `
   },
     {
