@@ -51,7 +51,7 @@ const HEADER_NAV_ITEMS = [
     object_name: "JS",
     descr: "description",
     properties: `
-      
+      ArrayMethods
     `
   },
 ];

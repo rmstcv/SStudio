@@ -11,8 +11,8 @@ ${globalVars.textSubTagOpen}
 Не стоит использовать глобальные переменные в скрипте Подготовка, если от них зависит логика анкеты, так как при пост-обработке глобальные переменные из этого скрипта всегда пусты.
 ${globalVars.textSubTagClose}
 ${globalVars.codeTextTagOpen}
-variables['ФИО'] = 'Иванов И.И.';
-variables.name = 'Пётр';
+variables['ФИО'] = 'Иванов И.И.'; // В текст подставляется так: {ФИО}
+variables.name = 'Пётр'; // В текст подставляется так: {name}
 V['age'] = 21;
 V.title = 'Hello, World!';
 ${globalVars.codeTextTagClose}
@@ -30,7 +30,7 @@ ${globalVars.codeTextTagOpen}
 {answerCode} - подстановка кода ответа для циклов.
 ${globalVars.codeTextTagClose}
 ${globalVars.textTagOpen}
-Используя скрипты:
+Подставить текст ответа в переменную:
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
 if (Q1.isAnswered) {

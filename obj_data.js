@@ -25,6 +25,10 @@ import { PropRowList } from "./pages/Prop/PropRowList.js";
 import { PropColumn } from "./pages/Prop/PropColumn.js";
 import { PropColumnList } from "./pages/Prop/PropColumnList.js";
 
+//JS
+import { ArrayMethods } from "./pages/JSstandard/ArrayMethods.js";
+
+
 const FunctionsData = [
     dataFunctions,
     AnswerExistsOnly
@@ -52,11 +56,16 @@ const PropData = [
     PropColumnList,
 ];
 
+const JSstandardData = [
+    ArrayMethods
+];
+
 const allPagesData = [
     ...FunctionsData,
     ...LibData,
     ...PropData,
     ...TestingPage, 
+    ...JSstandardData
 ];
 
 export { allPagesData }
