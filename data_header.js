@@ -21,7 +21,8 @@ const HEADER_NAV_ITEMS = [
     properties: `
       AgeRecode,
       ShowPrevChecked,
-      CheckPrevChecked,
+      CopyAnswers,
+      CheckAnswers,
       ShowOnlyCodesByCode,
       VarSubstitution,
       AddImages,
@@ -29,12 +30,14 @@ const HEADER_NAV_ITEMS = [
       ResultsOfScriptExec
     `
   },
-    {
-    obj_id: "SurveyTest",
-    object_name: "Тестирование анкеты",
+      {
+    obj_id: "SurveySystem",
+    object_name: "Работа в системе",
     descr: "description",
     properties: `
-      Testing
+      SurveyTesting,
+      CreateProject,
+      CreateSurvey
     `
   },
     {
@@ -56,4 +59,4 @@ const HEADER_NAV_ITEMS = [
   },
 ];
 
-  export { HEADER_NAV_ITEMS };
+export { HEADER_NAV_ITEMS };

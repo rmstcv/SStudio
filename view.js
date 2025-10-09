@@ -97,7 +97,9 @@ function createMainPage() {
   const currentObj = getObj(obj_item_id);
   
   main_page_elem.innerHTML = `<div class=${class_main_item_descr}>${getDescr(currentObj)}</div></br>`;
+  console.log(obj_item_id);
   let mainItems = currentObj.sub.split(", ");
+  
   let currentObjSub = "";
   
   mainItems.forEach((mainItem) => {

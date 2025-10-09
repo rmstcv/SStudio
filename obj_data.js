@@ -5,15 +5,19 @@ import { AnswerExistsOnly } from "./pages/Func/AnswerExistsOnly.js";
 //Lib
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
 import { ShowPrevChecked } from "./pages/Lib/ShowPrevChecked.js";
-import { CheckPrevChecked } from "./pages/Lib/CheckPrevChecked.js";
+import { CopyAnswers } from "./pages/Lib/CopyAnswers.js";
+import { CheckAnswers } from "./pages/Lib/CheckAnswers.js";
 import { ShowOnlyCodesByCode } from "./pages/Lib/ShowOnlyCodesByCode.js";
 import { VarSubstitution } from "./pages/Lib/VarSubstitution.js";
 import { AddImages } from "./pages/Lib/AddImages.js";
 import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
 import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
 
-//Testing
-import { TestingPage } from "./pages/Testing.js";
+//SurveySystem
+import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
+import { CreateProject} from "./pages/SSystem/CreateProject.js";
+import { CreateSurvey} from "./pages/SSystem/CreateSurvey.js";
+
 
 //Prop
 import { PropQuestion } from "./pages/Prop/PropQuestion.js";
@@ -37,7 +41,8 @@ const FunctionsData = [
 const LibData = [
     AgeRecode,
     ShowPrevChecked,
-    CheckPrevChecked,
+    CopyAnswers,
+    CheckAnswers,
     ShowOnlyCodesByCode,
     VarSubstitution,
     AddImages,
@@ -60,11 +65,18 @@ const JSstandardData = [
     ArrayMethods
 ];
 
+const SurveySystem = [
+    ...SurveyTestingPage,
+    CreateProject,
+    CreateSurvey
+];
+
+
 const allPagesData = [
     ...FunctionsData,
     ...LibData,
     ...PropData,
-    ...TestingPage, 
+    ...SurveySystem,
     ...JSstandardData
 ];
 

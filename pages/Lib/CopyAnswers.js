@@ -33,11 +33,11 @@ function copyAnswers(qn, except) {
 ${globalVars.codeTagClose}
 `;
 
-let CheckPrevChecked = {
-    id: "CheckPrevChecked",
+let CopyAnswers = {
+    id: "CopyAnswers",
     name: "Отметить выбранные в..",
     sub: "",
     descr: data_descr 
 };
 
-export { CheckPrevChecked };
+export { CopyAnswers };
