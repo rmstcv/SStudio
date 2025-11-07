@@ -8,7 +8,7 @@ ${globalVars.textTagOpen}
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
 if (AnswerExistsOnly(Q, [96,97,98,99])) { // если отмечены только коды 96,97,98,99 в Q
-    return question(Q2.number);
+    //to do something
 }
 ${globalVars.codeTagClose}
 ${globalVars.codeTagOpen}

@@ -24,10 +24,12 @@ const HEADER_NAV_ITEMS = [
       CopyAnswers,
       CheckAnswers,
       ShowOnlyCodesByCode,
+      AnswerExistsOnly,
       VarSubstitution,
       AddImages,
       RotationAnswers,
-      ResultsOfScriptExec
+      ResultsOfScriptExec,
+      RepeatQuestions
     `
   },
       {
@@ -42,11 +44,10 @@ const HEADER_NAV_ITEMS = [
   },
     {
     obj_id: "Scripts",
-    object_name: "Скрипты",
+    object_name: "Функции",
     descr: "description",
     properties: `
-      Functions,
-      AnswerExistsOnly
+      Functions
     `
   },
       {
@@ -54,7 +55,18 @@ const HEADER_NAV_ITEMS = [
     object_name: "JS",
     descr: "description",
     properties: `
-      ArrayMethods
+      ArrayMethods,
+      ArrToString,
+      SliceArr,
+      SpliceArr,
+      SomeArr,
+      FindElemInArr,
+      FindAllElemsInArr,
+      IntersectionOfArr,
+      ArrayIterations,
+      ConcatArr,
+      GetDateAndDay,
+      RandomNum
     `
   },
 ];

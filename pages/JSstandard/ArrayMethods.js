@@ -3,8 +3,7 @@ import globalVars from "../../globalVars.js";
 let data_descr = `${globalVars.titleTextTagOpen}
 Какой метод использовать
 ${globalVars.titleTextTagClose}
-${globalVars.codeTextTagOpen}
-Выбрать элементы по условию → filter
+${globalVars.codeTextTagOpen}Выбрать элементы по условию → filter
     [3,7].filter(x => [1,2,3].indexOf(x) !== -1); // [3]
 Проверить наличие конкретного примитива → indexOf (или includes)
     [1,2,3].indexOf(1) !== -1); // true
@@ -56,7 +55,7 @@ ${globalVars.codeTextTagClose}
 
 let ArrayMethods = {
     id: "ArrayMethods",
-    name: "Методы",
+    name: "Выбор метода",
     sub: "",
     descr: data_descr 
 };

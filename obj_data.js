@@ -1,6 +1,5 @@
 //Functions
 import { dataFunctions } from "./pages/Func/Functions.js";
-import { AnswerExistsOnly } from "./pages/Func/AnswerExistsOnly.js";
 
 //Lib
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
@@ -9,9 +8,11 @@ import { CopyAnswers } from "./pages/Lib/CopyAnswers.js";
 import { CheckAnswers } from "./pages/Lib/CheckAnswers.js";
 import { ShowOnlyCodesByCode } from "./pages/Lib/ShowOnlyCodesByCode.js";
 import { VarSubstitution } from "./pages/Lib/VarSubstitution.js";
+import { AnswerExistsOnly } from "./pages/Lib/AnswerExistsOnly.js";
 import { AddImages } from "./pages/Lib/AddImages.js";
 import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
 import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
+import { RepeatQuestions } from "./pages/Lib/RepeatQuestions.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -31,7 +32,17 @@ import { PropColumnList } from "./pages/Prop/PropColumnList.js";
 
 //JS
 import { ArrayMethods } from "./pages/JSstandard/ArrayMethods.js";
-
+import { ArrToString } from "./pages/JSstandard/ArrToString.js";
+import { FindElemInArr } from "./pages/JSstandard/FindElemInArr.js";
+import { RandomNum } from "./pages/JSstandard/RandomNum.js";
+import { SliceArr } from "./pages/JSstandard/SliceArr.js";
+import { SomeArr } from "./pages/JSstandard/SomeArr.js";
+import { SpliceArr } from "./pages/JSstandard/SpliceArr.js";
+import { FindAllElemsInArr } from "./pages/JSstandard/FindAllElemsInArr.js";
+import { IntersectionOfArr } from "./pages/JSstandard/IntersectionOfArr.js";
+import { ArrayIterations } from "./pages/JSstandard/ArrayIterations.js";
+import { ConcatArr } from "./pages/JSstandard/ConcatArr.js";
+import { GetDateAndDay } from "./pages/JSstandard/GetDateAndDay.js";
 
 const FunctionsData = [
     dataFunctions,
@@ -47,7 +58,8 @@ const LibData = [
     VarSubstitution,
     AddImages,
     RotationAnswers,
-    ResultsOfScriptExec
+    ResultsOfScriptExec,
+    RepeatQuestions
 ];
 
 const PropData = [
@@ -62,7 +74,18 @@ const PropData = [
 ];
 
 const JSstandardData = [
-    ArrayMethods
+      ArrayMethods,
+      ArrToString,
+      SliceArr,
+      SomeArr,
+      SpliceArr,
+      FindElemInArr,
+      FindAllElemsInArr,
+      IntersectionOfArr,
+      ArrayIterations,
+      ConcatArr,
+      GetDateAndDay,
+      RandomNum
 ];
 
 const SurveySystem = [

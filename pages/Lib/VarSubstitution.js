@@ -1,7 +1,6 @@
 import globalVars from "../../globalVars.js";
 
-let data_descr = `${globalVars.titleTextTagOpen}
-Подстановки необходимого значения в текст вопроса или ответа.
+let data_descr = `${globalVars.titleTextTagOpen}Подстановки необходимого значения в текст вопроса или ответа.
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 Используя хранилище глобальных переменных.
