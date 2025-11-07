@@ -97,7 +97,9 @@ function createMainPage() {
   const currentObj = getObj(obj_item_id);
   
   main_page_elem.innerHTML = `<div class=${class_main_item_descr}>${getDescr(currentObj)}</div></br>`;
+  console.log(obj_item_id);
   let mainItems = currentObj.sub.split(", ");
+  
   let currentObjSub = "";
   
   mainItems.forEach((mainItem) => {
@@ -221,9 +223,9 @@ function addMainListener() {
     };
 
     if (e.target.classList.contains("clickBtn")) {
-      let elemForCopy = e.target.closest(".codeblock").querySelector("code");
-
-      if (elemForCopy) {
+      let elemForCopy = e.target.previousElementSibling;
+      
+      if (elemForCopy && elemForCopy.classList.contains('codeblock')) {
         navigator.clipboard.writeText(elemForCopy.textContent);
       };
     };
@@ -329,10 +331,10 @@ function addCopyButton () {
 
   if (elemsForButton) {
     elemsForButton.forEach((elem) => {
-    const copyButton = document.createElement('button');
-    copyButton.textContent = 'copy';
-    copyButton.classList.add("clickBtn");
-    elem.appendChild(copyButton);
+      const copyButton = document.createElement('button');
+      copyButton.textContent = 'copy';
+      copyButton.classList.add("clickBtn");
+      elem.insertAdjacentElement('afterend', copyButton);
     });
   };
 };

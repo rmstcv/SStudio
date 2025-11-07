@@ -19,25 +19,56 @@ const HEADER_NAV_ITEMS = [
     object_name: "Как сделать",
     descr: "description",
     properties: `
-      AgeRecode
+      AgeRecode,
+      ShowPrevChecked,
+      CopyAnswers,
+      CheckAnswers,
+      ShowOnlyCodesByCode,
+      AnswerExistsOnly,
+      VarSubstitution,
+      AddImages,
+      RotationAnswers,
+      ResultsOfScriptExec,
+      RepeatQuestions
     `
   },
-    {
-    obj_id: "SurveyTest",
-    object_name: "Тестирование анкеты",
+      {
+    obj_id: "SurveySystem",
+    object_name: "Работа в системе",
     descr: "description",
     properties: `
-      Testing
+      SurveyTesting,
+      CreateProject,
+      CreateSurvey
     `
   },
     {
     obj_id: "Scripts",
-    object_name: "Скрипты",
+    object_name: "Функции",
     descr: "description",
     properties: `
       Functions
     `
   },
+      {
+    obj_id: "JSstandard",
+    object_name: "JS",
+    descr: "description",
+    properties: `
+      ArrayMethods,
+      ArrToString,
+      SliceArr,
+      SpliceArr,
+      SomeArr,
+      FindElemInArr,
+      FindAllElemsInArr,
+      IntersectionOfArr,
+      ArrayIterations,
+      ConcatArr,
+      GetDateAndDay,
+      RandomNum
+    `
+  },
 ];
 
-  export { HEADER_NAV_ITEMS };
+export { HEADER_NAV_ITEMS };
