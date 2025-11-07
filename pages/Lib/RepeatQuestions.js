@@ -47,7 +47,7 @@ for (let code of Q1.getCheckedCodes()) {
 return skip;
 ${globalVars.codeTagClose}
 ${globalVars.textTagOpen}
-Цикл по невыбранным ответов
+Цикл по невыбранным ответам
 ${globalVars.textTagClose}
 ${globalVars.textSubTagOpen}
 Добавляем в скрипт Подготовка
