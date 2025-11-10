@@ -3,11 +3,11 @@ import globalVars from "../../globalVars.js";
 let data_descr = `${globalVars.titleTextTagOpen}
 Выбрать случайные варианты ответа
 ${globalVars.titleTextTagClose}
-${globalVars.textTagOpen}
+${globalVars.textSubTagOpen}
 В переменной num нужно указать желаемое количество случайных ответов. 
 Если требуется делать выбор только среди определённых ответов, то их нужно сделать видимыми сразу после первого if, скрыв лишние. 
 Скрипт перед показом:
-${globalVars.textTagClose}
+${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 let num = 1;
 

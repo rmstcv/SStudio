@@ -1,7 +1,7 @@
 import globalVars from "../../globalVars.js";
 
 let data_descr = `${globalVars.titleTextTagOpen}
-Выбрать случайные варианты ответа
+Сгенерировать случайное число в указанном диапазоне
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 В переменной num нужно указать желаемое количество случайных ответов. 
@@ -9,17 +9,17 @@ ${globalVars.textTagOpen}
 Скрипт перед показом:
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
-let num = 1;
-
 if (Q.isAnswered) return answered;
 
-if (Q.visibleCount == 0) return skip;
-
-for (let A of randomizeArray(Q.getVisible()).slice(0, num)) {
-    A.checked = true;
-}
+Q.openValueNum = getRandomFromTo(1, 10);
 
 return answered;
+
+function getRandomFromTo(min, max) {
+    let range = max - min + 1;
+
+    return Math.floor(Math.random()*range) + min;
+}
 ${globalVars.codeTagClose}
 `;
 
