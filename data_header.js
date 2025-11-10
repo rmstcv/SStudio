@@ -23,6 +23,7 @@ const HEADER_NAV_ITEMS = [
       ShowPrevChecked,
       CopyAnswers,
       CheckAnswers,
+      ShowHideAnswers,
       ShowOnlyCodesByCode,
       AnswerExistsOnly,
       AutoAnswer,
@@ -30,7 +31,14 @@ const HEADER_NAV_ITEMS = [
       AddImages,
       RotationAnswers,
       ResultsOfScriptExec,
-      RepeatQuestions
+      RepeatQuestions,
+      ValidationAnswers,
+      CheckRandAnswer,
+      GenerateRandNum,
+      ShownRowsInTable,
+      ShowRowsConditions,
+      CodedGroups,
+      SurveyQuality
     `
   },
       {

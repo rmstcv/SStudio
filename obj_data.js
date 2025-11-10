@@ -14,6 +14,14 @@ import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
 import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
 import { RepeatQuestions } from "./pages/Lib/RepeatQuestions.js";
 import { AutoAnswer } from "./pages/Lib/AutoAnswer.js";
+import { ShowHideAnswers } from "./pages/Lib/ShowHideAnswers.js";
+import { ValidationAnswers } from "./pages/Lib/ValidationAnswers.js";
+import { CheckRandAnswer } from "./pages/Lib/CheckRandAnswer.js";
+import { GenerateRandNum } from "./pages/Lib/GenerateRandNum.js";
+import { ShownRowsInTable } from "./pages/Lib/ShownRowsInTable.js";
+import { ShowRowsConditions } from "./pages/Lib/ShowRowsConditions.js";
+import { CodedGroups } from "./pages/Lib/CodedGroups.js";
+import { SurveyQuality } from "./pages/Lib/SurveyQuality.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -55,13 +63,21 @@ const LibData = [
     ShowPrevChecked,
     CopyAnswers,
     CheckAnswers,
+    ShowHideAnswers,
     AutoAnswer,
     ShowOnlyCodesByCode,
     VarSubstitution,
     AddImages,
     RotationAnswers,
     ResultsOfScriptExec,
-    RepeatQuestions
+    RepeatQuestions,
+    ValidationAnswers,
+    CheckRandAnswer,
+    GenerateRandNum,
+    ShownRowsInTable,
+    ShowRowsConditions,
+    CodedGroups,
+    SurveyQuality
 ];
 
 const PropData = [
