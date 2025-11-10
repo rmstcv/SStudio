@@ -32,7 +32,7 @@ ${globalVars.codeTagClose}
 
 let AnswerExistsOnly = {
     id: "AnswerExistsOnly",
-    name: "Если отмечены только коды..",
+    name: "Только коды.. (AnswerExistsOnly)",
     sub: "",
     descr: data_descr 
 };

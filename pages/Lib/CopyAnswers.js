@@ -35,7 +35,7 @@ ${globalVars.codeTagClose}
 
 let CopyAnswers = {
     id: "CopyAnswers",
-    name: "Перенести выбранные в..",
+    name: "Перенести ответы (сopyAnswers)",
     sub: "",
     descr: data_descr 
 };

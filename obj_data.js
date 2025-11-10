@@ -13,6 +13,7 @@ import { AddImages } from "./pages/Lib/AddImages.js";
 import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
 import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
 import { RepeatQuestions } from "./pages/Lib/RepeatQuestions.js";
+import { AutoAnswer } from "./pages/Lib/AutoAnswer.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -54,6 +55,7 @@ const LibData = [
     ShowPrevChecked,
     CopyAnswers,
     CheckAnswers,
+    AutoAnswer,
     ShowOnlyCodesByCode,
     VarSubstitution,
     AddImages,

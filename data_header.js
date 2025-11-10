@@ -25,6 +25,7 @@ const HEADER_NAV_ITEMS = [
       CheckAnswers,
       ShowOnlyCodesByCode,
       AnswerExistsOnly,
+      AutoAnswer,
       VarSubstitution,
       AddImages,
       RotationAnswers,
