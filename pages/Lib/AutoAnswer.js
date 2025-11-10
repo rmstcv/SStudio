@@ -15,7 +15,7 @@ if (Q.answers.visibleCount == 2) { //Количество ответов, кот
     return answered; // или return testAnswered(Q);
 }
 
-return Q.answers.visibleCount > 1 ? ok : skip;
+return Q.answers.visibleCount > 0 ? ok : skip;
 ${globalVars.codeTagClose}
 ${globalVars.textTagOpen}
 Выбор ответа, если выбран какой-то другой ответ:
