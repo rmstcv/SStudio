@@ -38,7 +38,8 @@ const HEADER_NAV_ITEMS = [
       ShownRowsInTable,
       ShowRowsConditions,
       CodedGroups,
-      SurveyQuality
+      SurveyQuality,
+      OpenTextsAndZO
     `
   },
       {

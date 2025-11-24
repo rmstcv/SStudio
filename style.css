@@ -1,23 +1,29 @@
 :root{
---bg: #0e1015;           
---panel: #13151a;           
---panel-2: #0c0f13;        
+/* --bg: #0e1015;            */
+--bg:#1b1e21;
+/* --panel: #13151a;        */
+--panel: #2a2d2f;       
+/* --panel-2: #0c0f13;       */
+--panel-2: #232729;       
 --text: #e4eaf1;             
 --muted: #9aa3b0;           
 /* --accent: #c67877;           */
---accent: #7996b3;
+/* --accent: #7996b3; */
+--accent:#a67e7e;
 --accent-2: #acc0d8;          
 --accent-3: #7dd3b0;     
 --danger: #ff6b6b;            
 --glass: rgba(255,255,255,0.02);
 --surface-contrast: rgba(255,255,255,0.035);
---code-bg: #0a0d12;
+/* --code-bg: #0a0d12; */
+--code-bg: #1b1e21;
 /* --mono: "Inter", "Space Mono", "SFMono-Regular", Consolas, "Courier New", monospace; */
 --mono: "Space Mono", "SFMono-Regular", "Consolas", "Courier New", monospace;
 --monoCode: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 --base-font-size: 15px;
 --radius: 8px;
---shadow-1: 0 6px 18px rgba(2,6,23,0.6);
+/* --shadow-1: 0 6px 18px rgba(2,6,23,0.6); */
+--shadow-1: 0 6px 18px rgb(23 2 2 / 60%);
 --hover-alpha: 0.02;
 }
 
@@ -76,7 +82,8 @@ background:transparent;
 /* Active */
 .header_nav_item__active, .side_nav_item__active{
 color:var(--accent);
-background:linear-gradient(90deg, rgba(87,182,255,0.06), transparent);
+/* background:linear-gradient(90deg, rgba(87,182,255,0.06), transparent); */
+background:linear-gradient(90deg, rgba(65,69,81,0.4), transparent);
 }
 
 /* Links & inputs */
@@ -207,11 +214,24 @@ a { color: var(--accent-2); text-decoration: none; }
 
 /* Hover / focus */
 .menu_item:hover, .side_menu_item:hover, .clickBtn:hover { background: rgba(    255,255,255,var(--hover-alpha)); transform: translateY(-1px); }
-.menu_item:focus, .side_menu_item:focus, .clickBtn:focus { outline: 2px solid rgba(88,166,255,0.18); outline-offset: 3px; }
-
+ .menu_item:focus, .side_menu_item:focus, .clickBtn:focus { outline: 2px solid rgba(88,166,255,0.18); outline-offset: 1px; } */
+/* .menu_item:focus, .side_menu_item:focus, .clickBtn:focus {
+    outline: 1px solid rgb(209 115 115 / 12%);
+    outline-offset: 1px;
+} */
 /* Кнопки */
-.clickBtn { background: transparent; color: #58a6ff57; border-radius: 8px; transition: transform .08s, box-shadow .12s; }
-.clickBtn:hover { box-shadow: var(--shadow-1); color: var(--accent-2); }
+.clickBtn { 
+  background: transparent; 
+  /* color: #58a6ff57;  */
+  color: #5e6468; 
+  border-radius: 8px;
+  transition: transform .08s, box-shadow .12s; 
+}
+  
+.clickBtn:hover { 
+  box-shadow: var(--shadow-1); 
+  color: var(--accent-2); 
+}
 
 /* Таблицы и линии */
 th, td { border-bottom: 1px solid var(--surface-contrast); color: var(--muted); }
