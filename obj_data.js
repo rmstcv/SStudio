@@ -15,7 +15,7 @@ import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
 import { RepeatQuestions } from "./pages/Lib/RepeatQuestions.js";
 import { AutoAnswer } from "./pages/Lib/AutoAnswer.js";
 import { ShowHideAnswers } from "./pages/Lib/ShowHideAnswers.js";
-import { ValidationAnswers } from "./pages/Lib/ValidationAnswers.js";
+import { ValidationAnswersPage } from "./pages/Lib/ValidationAnswers.js";
 import { CheckRandAnswer } from "./pages/Lib/CheckRandAnswer.js";
 import { GenerateRandNum } from "./pages/Lib/GenerateRandNum.js";
 import { ShownRowsInTable } from "./pages/Lib/ShownRowsInTable.js";
@@ -73,7 +73,7 @@ const LibData = [
     RotationAnswers,
     ResultsOfScriptExec,
     RepeatQuestions,
-    ValidationAnswers,
+    ...ValidationAnswersPage,
     CheckRandAnswer,
     GenerateRandNum,
     ShownRowsInTable,
