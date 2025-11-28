@@ -49,7 +49,8 @@ const HEADER_NAV_ITEMS = [
     properties: `
       SurveyTesting,
       CreateProject,
-      CreateSurvey
+      CreateSurvey,
+      CreateQuotas
     `
   },
     {

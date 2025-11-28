@@ -4,7 +4,7 @@ let data_descr = `${globalVars.titleTextTagOpen}
 Многоответный вопрос с вводом числовых значений и валидацией суммы по строкам + ничего из перечисленного.
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
-Реализовывается как многоответный вопрос с открытми значениями.
+Реализовывается как многоответный вопрос с открытыми значениями.
 Скрипт после показа:
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}

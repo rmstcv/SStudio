@@ -3,8 +3,7 @@ import globalVars from "../../globalVars.js";
 let data_descr = `${globalVars.titleTextTagOpen}
 Настройки анкеты
 ${globalVars.titleTextTagClose}
-${globalVars.codeTextTagOpen}
-В свойствах анкеты необходимо:
+${globalVars.codeTextTagOpen}В свойствах анкеты:
 
 Поставить чекбоксы:
 ✓ Автоматически формировать имена переменных в массиве

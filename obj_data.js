@@ -26,6 +26,7 @@ import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
+import { CreateQuotasPage } from "./pages/SSystem/CreateQuotas.js";
 import { CreateProject} from "./pages/SSystem/CreateProject.js";
 import { CreateSurvey} from "./pages/SSystem/CreateSurvey.js";
 
@@ -111,7 +112,8 @@ const JSstandardData = [
 const SurveySystem = [
     ...SurveyTestingPage,
     CreateProject,
-    CreateSurvey
+    CreateSurvey,
+    ...CreateQuotasPage,
 ];
 
 

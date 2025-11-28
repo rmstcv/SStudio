@@ -6,8 +6,7 @@ ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 Скрипт перед показом перенесёт в текущий вопрос ответы из Q1 и Q7:
 ${globalVars.textTagClose}
-${globalVars.codeTagOpen}
-сopyAnswers(1, [97,99]); // кроме кодов 97 и 99
+${globalVars.codeTagOpen}сopyAnswers(1, [97,99]); // кроме кодов 97 и 99
 copyAnswers(7);
 return Q.isAnswered ? answered : skip;
 

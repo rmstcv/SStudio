@@ -157,7 +157,7 @@ cursor:pointer;
 border-radius:8px;
 font-size:0.95rem;
 padding:8px 12px;
-color:var(--text);
+color:rgba(87,182,255,0.25);
 transition:transform .08s ease, box-shadow .12s ease, background .12s;
 }
 .clickBtn:hover{ transform:translateY(-2px); background:var(--glass); }
@@ -269,4 +269,16 @@ background: rgba(88,166,255,0.22); / подсветка при ховере /
 .container, .container_side, .container_content {
 scrollbar-width: thin;
 scrollbar-color: rgba(136,153,166,0.14) rgba(255,255,255,0.01);
+}
+
+/* img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+img {
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    /* border: 1px solid #f0f0f0; */
+    filter: brightness(0.95);
 }

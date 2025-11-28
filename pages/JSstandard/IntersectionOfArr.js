@@ -10,7 +10,7 @@ const exists = B.some(function(b) {
 });
 
 ${globalVars.codeTextTagClose}
-${globalVars.textTagOpen}ES5-версия с явным циклом (без some):
+${globalVars.textTagOpen}C явным циклом (без some):
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}var exists = false;
 
@@ -21,7 +21,7 @@ for (var i = 0; i < B.length; i++) {
   }
 }
 ${globalVars.codeTextTagClose}
-${globalVars.textTagOpen}Для объектов по ключу (пример с id/ref), ES5-подход:
+${globalVars.textTagOpen}Для объектов по ключу, ES5-подход:
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}var A = [{id:1},{id:3}];
 var B = [{ref:3},{ref:5}];
@@ -36,7 +36,6 @@ ${globalVars.textTagOpen}Или без some полностью:
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}var exists = false;
 
-var exists = false;
 for (var i = 0; i < B.length; i++) {
   for (var j = 0; j < A.length; j++) {
     if (A[j].id === B[i].ref) {
