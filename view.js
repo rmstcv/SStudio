@@ -11,6 +11,7 @@ const class_main_item_active = "main_item__active";
 const class_main_item_name = "main_item_name";
 const class_main_item_descr = "main_item_descr";
 const class_main_item_name_active = "main_item_name__active";
+const class_container_content = "container_content"
 const main_menu_elem = document.querySelector(".main_menu");
 const PADDING_LEFT = 1;
 
@@ -89,9 +90,8 @@ function setActiveTabSide(elementId) {
 };
 
 function createMainPage() {
-  const main_page_elem = document.querySelector(".container_content");
+  const main_page_elem = document.querySelector(`.${class_container_content}`);
   const side_active_elem = document.querySelector(`.${class_side_tab_active}`);
-  
   let obj_item_id = side_active_elem.getAttribute(data_id);
   let div;
   main_page_elem.innerHTML = "";
@@ -217,10 +217,31 @@ function addMainListener() {
       renderSideTabs(idElem);
     };
 
+    // if (e.target.classList.contains(class_main_item_name) && !e.target.classList.contains(class_main_item_name_active)) {
+    //   let mainItem = e.target.closest(`.${class_main_item}`);
+    //   // e.preventDefault();
+    //   // e.stopPropagation();
+    //   const main_page_elem_scroll = document.querySelector(`.${class_container_content}`);
+    //   renderMainItems(getIdByElem(mainItem));
+    //   main_page_elem_scroll.scrollTop = mainItem.offsetTop - main_page_elem_scroll.offsetTop;
+    // };
+
     if (e.target.classList.contains(class_main_item_name) && !e.target.classList.contains(class_main_item_name_active)) {
-      let mainItem = e.target.closest(`.${class_main_item}`)  ;
+      let mainItem = e.target.closest(`.${class_main_item}`);
+      e.preventDefault();
+          
+      const main_page_elem_scroll = document.querySelector(`.${class_container_content}`);
+      const main_item__active = document.querySelector(`.${class_main_item_active}`);
+      let main_item__active_Rect = 0;
+
+      if (main_item__active) {
+        main_item__active_Rect = main_item__active.offsetHeight;
+      }
+      const elementRect = mainItem.getBoundingClientRect();
       renderMainItems(getIdByElem(mainItem));
+      main_page_elem_scroll.scrollTop = elementRect.top - mainItem.getBoundingClientRect().top - main_item__active_Rect - 10;
     };
+
 
     if (e.target.classList.contains("clickBtn")) {
       let elemForCopy = e.target.previousElementSibling;

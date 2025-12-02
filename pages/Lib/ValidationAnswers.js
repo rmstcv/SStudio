@@ -15,6 +15,7 @@ let data_descr_IntegerValidation = `
 ${globalVars.codeTagOpen}
 for (let row of Q.rows.getVisible()) {
     let num = row.answer.openValueNum;
+    
     if (num < 1 || num > 100) {
         return error('В строке '+ row.code +' можно вводить только числа от 1 до 100');
     }
@@ -23,11 +24,8 @@ ${globalVars.codeTagClose}
 `;
 let data_descr_RequireAnswerValidation = `
 ${globalVars.codeTagOpen}
-for (let row of Q.rows.getVisible()) {
-    let num = row.answer.openValueNum;
-    if (num < 1 || num > 100) {
-        return error('В строке '+ row.code +' можно вводить только числа от 1 до 100');
-    }
+if (Q.openValueNum > Q1.openValueNum) {
+    return error('Введённое число не может быть больше числа из Q1');
 }
 ${globalVars.codeTagClose}
 `;
