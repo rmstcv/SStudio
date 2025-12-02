@@ -46,6 +46,34 @@ if (Q1.isAnswered) {
 }
 ${globalVars.codeTagClose}
 ${globalVars.textTagOpen}
+Собственная подстановка ответа в вопросах цикла (вместо {answerText})
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Q1 - вопрос, по ответам (1-98) которого задаётся Q2. Глобальный скрипт перед показом:
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+if ((Q.number / 100 | 0) == 2) {
+    let A = Q1[Q.number % 100];
+    V['Магазин'] = A.flags & AnswerFlags.OpenValueTxt ? A.openValueTxt : A.text;
+}
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
+Выводить текст вопроса в зависимости от выбранного в предыдущем вопросе ответа
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Q1 - единственный выбор. В следующем вопросе скрипт перед показом:
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+let code = Q1.getCheckedCode();
+let texts = {
+    1: 'Текст вопроса для кода 1',
+    2: 'Текст вопроса для кода 2',
+    3: 'Текст вопроса для кода 3'
+};
+
+Q.text = code in texts ? texts[code] : 'Не найден текст для кода ' + code;
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
 Подстановки кодов ответов и строк таблицы в поле Шаблон редактора вопроса для формирования имён переменных (если необходимо отключить в анкете автоматическое формирование имен переменных):
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}

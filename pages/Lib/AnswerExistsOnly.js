@@ -6,6 +6,9 @@ ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 В качестве второго аргумента функция принимает массив кодов
 ${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+аналог для выражений: Q = 3 and not Q != 3
+${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 if (AnswerExistsOnly(Q, [96,97,98,99])) { // если отмечены только коды 96,97,98,99 в Q
     //to do something
@@ -32,7 +35,7 @@ ${globalVars.codeTagClose}
 
 let AnswerExistsOnly = {
     id: "AnswerExistsOnly",
-    name: "Если отмечены только коды..",
+    name: "Только коды.. (AnswerExistsOnly)",
     sub: "",
     descr: data_descr 
 };

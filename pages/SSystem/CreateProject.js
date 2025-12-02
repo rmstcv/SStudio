@@ -3,8 +3,7 @@ import globalVars from "../../globalVars.js";
 let data_descr = `${globalVars.titleTextTagOpen}
 Настройки проекта
 ${globalVars.titleTextTagClose}
-${globalVars.codeTextTagOpen}
-В свойствах проекта необходимо:
+${globalVars.codeTextTagOpen}В свойствах проекта:
 
 Поставить чекбоксы:
 ✓ Требуется ввод имени пользователя и пароля

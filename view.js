@@ -49,6 +49,7 @@ function createSideNav(activeHeaderId) {
 
     if (item.obj_id === activeHeader) {
       sideItems = item.properties.split(",");
+      sideItems = item.properties.split(/\s*,\s*/).filter(item => item.length > 0);
     };
   });
   side_menu_elem.innerHTML = "";
@@ -97,9 +98,8 @@ function createMainPage() {
   const currentObj = getObj(obj_item_id);
   
   main_page_elem.innerHTML = `<div class=${class_main_item_descr}>${getDescr(currentObj)}</div></br>`;
-  console.log(obj_item_id);
-  let mainItems = currentObj.sub.split(", ");
-  
+  // let mainItems = currentObj.sub.split(", ");
+  let mainItems = currentObj.sub.split(/\s*,\s*/).filter(item => item.length > 0);
   let currentObjSub = "";
   
   mainItems.forEach((mainItem) => {
@@ -126,7 +126,7 @@ function renderSubItem(parentItemElem, parentItemId) {
   descrMain_elem.classList.add(class_main_item_descr);
   descrMain_elem.style.paddingLeft = `${spaces.toString()}em`;
   parentItemElem.appendChild(descrMain_elem);
-  let subItems = parentObj.sub.split(", ");
+  let subItems = parentObj.sub.split(/\s*,\s*/).filter(item => item.length > 0);
 
   if (parentObj.sub) {
     subItems.forEach((mainItem) => {
@@ -289,7 +289,8 @@ function initHash(hashInit) {
         HEADER_NAV_ITEMS.forEach((headerItem) => {
 
           if (headerItem.obj_id == objId) { //поиск в сайдах
-            headerItem.properties.split(",").forEach((item) => {
+            // headerItem.properties.split(",").forEach((item) => {
+            headerItem.properties.split(/\s*,\s*/).filter(item => item.length > 0).forEach((item) => {
               
               if (item.trim() == hash) {            
                 searchElem = subElem;
@@ -298,8 +299,8 @@ function initHash(hashInit) {
               } else { //поиск в сабах
 
                 if (getObj(item.trim()).sub) {
-                  getObj(item.trim()).sub.split(", ").forEach((subItem) => {
-                    
+                  // getObj(item.trim()).sub.split(", ").forEach((subItem) => {
+                  getObj(item.trim()).sub.split(/\s*,\s*/).filter(item => item.length > 0).forEach((subItem) => {  
                     if (subItem == hash) {                 
                       searchElem = subItem;
                       renderHeaderTabs(headerItem.obj_id);

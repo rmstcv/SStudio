@@ -23,13 +23,23 @@ const HEADER_NAV_ITEMS = [
       ShowPrevChecked,
       CopyAnswers,
       CheckAnswers,
+      ShowHideAnswers,
       ShowOnlyCodesByCode,
       AnswerExistsOnly,
+      AutoAnswer,
       VarSubstitution,
       AddImages,
       RotationAnswers,
       ResultsOfScriptExec,
-      RepeatQuestions
+      RepeatQuestions,
+      ValidationAnswers,
+      CheckRandAnswer,
+      GenerateRandNum,
+      ShownRowsInTable,
+      ShowRowsConditions,
+      CodedGroups,
+      SurveyQuality,
+      OpenTextsAndZO
     `
   },
       {
@@ -39,7 +49,8 @@ const HEADER_NAV_ITEMS = [
     properties: `
       SurveyTesting,
       CreateProject,
-      CreateSurvey
+      CreateSurvey,
+      CreateQuotas
     `
   },
     {

@@ -26,7 +26,7 @@ ${globalVars.codeTagClose}
 
 let ShowPrevChecked = {
     id: "ShowPrevChecked",
-    name: "Показать выбранные в..",
+    name: "Перенос текста из «другого»",
     sub: "",
     descr: data_descr 
 };

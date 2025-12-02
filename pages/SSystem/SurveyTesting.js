@@ -8,7 +8,7 @@ const data_descr_TestingStart = `
 <img src="images/testLink.jpg" alt="testLink " width="300">
 </br></br>
 Тестирование в приложении (кнопка <b>Start test survey</b>):</br></br>
-<img src="images/testLinkApp.jpg" alt="testLink " width="300">
+<img src="images/testLinkApp.jpg" alt="testLink " width="200">
 `;
 
 const data_descr_TestingFuncIsTesting = `${globalVars.textTagOpen}
@@ -50,7 +50,7 @@ ${globalVars.codeTagOpen}if (isTesting()) {
     q2_1.answers[1].checked = true; // выбрать ответ в вопросе q2_1
     return question(q2_1.number); // переход к вопросу q2_1 (используя алиас имени)
     return question(3); // переход к вопросу Q3 (используя системное имя)
-};
+}
 
 ${globalVars.codeTagClose}
 `;
@@ -68,7 +68,7 @@ ${globalVars.codeTagClose}
 const TestingStart = {id:'TestingStart', name:'Тестирование анкеты', sub:'', descr: data_descr_TestingStart};
 const TestingFuncIsTesting = {id:'TestingFuncIsTesting', name:'Тестовый экран', sub:'', descr: data_descr_TestingFuncIsTesting};
 const TestingVarName = {id:'TestingVarName', name:'Показывать имя (шаблон) вопроса в режиме тестирования анкеты', sub:'', descr: data_descr_TestingVarName};
-const TestingGoTo = {id:'TestingGoTo', name:'Переход к вопросу (аналог goToSkok)', sub:'', descr: data_descr_TestingGoTo};
+const TestingGoTo = {id:'TestingGoTo', name:'Переход к вопросу', sub:'', descr: data_descr_TestingGoTo};
 const TestingDebug = {id:'TestingDebug', name:'Вывести информацию (debug)', sub:'', descr: data_descr_TestingDebug};
 
 const SurveyTesting = {
