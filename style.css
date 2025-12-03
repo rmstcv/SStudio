@@ -10,7 +10,7 @@
   --accent-2: #acc0d8;
   --accent-3: #7dd3b0;
   --danger: #ff6b6b;
-  --glass: rgba(255, 255, 255, 0.02);
+  --glass: rgb(98 98 98 / 16%);
   --surface-contrast: rgba(255, 255, 255, 0.035);
   --code-bg: #1b1e21;
 
@@ -28,7 +28,6 @@
 /* ===== RESET & BASE STYLES ===== */
 * {
   box-sizing: border-box;
-  /* scroll-behavior: smooth; */
 }
 
 html, body {
@@ -41,6 +40,7 @@ html, body {
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 /* ===== LAYOUT ===== */
@@ -125,10 +125,6 @@ body {
    overflow-y: overlay; /* Современное решение, если поддерживается */
 }
 
-/* .main_item_descr, .obj_descr{
-  max-height: 100%;
-} */
-
 /* ===== NAVIGATION & MENUS ===== */
 .main_menu {
   display: flex;
@@ -153,7 +149,7 @@ body {
 .menu_item:hover,
 .side_menu_item:hover {
   background: var(--glass);
-  transform: translateY(-1px);
+  transform: translateX(2px);
 }
 
 .side_menu_item {
@@ -207,8 +203,7 @@ a {
 }
 
 .main_item_name:hover {
-  background: rgba(87, 182, 255, 0.03);
-  color: var(--accent);
+  background: var(--glass);
   transform: translateX(2px);
 }
 

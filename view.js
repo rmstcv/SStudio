@@ -226,20 +226,49 @@ function addMainListener() {
     //   main_page_elem_scroll.scrollTop = mainItem.offsetTop - main_page_elem_scroll.offsetTop;
     // };
 
+    // if (e.target.classList.contains(class_main_item_name) && !e.target.classList.contains(class_main_item_name_active)) {
+    //   let mainItem = e.target.closest(`.${class_main_item}`);
+    //   e.preventDefault();
+          
+    //   const main_page_elem_scroll = document.querySelector(`.${class_container_content}`);
+    //   const main_item__active = document.querySelector(`.${class_main_item_active}`);
+    //   let main_item__active_Rect = 0;
+
+    //   if (main_item__active) {
+    //     main_item__active_Rect = main_item__active.offsetHeight;
+    //   }
+    //   const elementRect = mainItem.getBoundingClientRect();
+    //   renderMainItems(getIdByElem(mainItem));
+    //   main_page_elem_scroll.scrollTop = elementRect.top - mainItem.getBoundingClientRect().top - main_item__active_Rect - 10;
+    // };
+
     if (e.target.classList.contains(class_main_item_name) && !e.target.classList.contains(class_main_item_name_active)) {
       let mainItem = e.target.closest(`.${class_main_item}`);
       e.preventDefault();
-          
-      const main_page_elem_scroll = document.querySelector(`.${class_container_content}`);
-      const main_item__active = document.querySelector(`.${class_main_item_active}`);
-      let main_item__active_Rect = 0;
+      e.stopPropagation();
+      
+      const container = document.querySelector(`.${class_container_content}`);
+      const elementId = getIdByElem(mainItem);
+      
+      const rect = mainItem.getBoundingClientRect();
+      const visibleFromTop = rect.top;
 
-      if (main_item__active) {
-        main_item__active_Rect = main_item__active.offsetHeight;
-      }
-      const elementRect = mainItem.getBoundingClientRect();
-      renderMainItems(getIdByElem(mainItem));
-      main_page_elem_scroll.scrollTop = elementRect.top - mainItem.getBoundingClientRect().top - main_item__active_Rect - 10;
+      renderMainItems(elementId);
+    
+      setTimeout(() => {
+          const newElement = getElemById(elementId);
+
+          if (newElement) {
+            const newRect = newElement.getBoundingClientRect();
+            const scrollNeeded = newRect.top - visibleFromTop;
+    
+            container.scrollTop = container.scrollTop + scrollNeeded;
+
+            if (newRect.top < 50) { // Если слишком близко к верху
+                container.scrollTop = newElement.offsetTop - 350;
+            }
+          }
+      }, 10);
     };
 
 
