@@ -136,7 +136,7 @@ body {
 
 .menu_item,
 .side_menu_item {
-  padding: 8px 10px;
+  padding: 3px 10px;
   cursor: pointer;
   border-radius: 6px;
   color: var(--text);
@@ -153,7 +153,7 @@ body {
 }
 
 .side_menu_item {
-  padding-left: 16px;
+  /* padding-left: 16px; */
   /* color: var(--muted); */
   font-weight: 500;
 }
