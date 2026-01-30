@@ -28,15 +28,6 @@ function screenOut() {
     };
 };
 
-function AnswerExistsAny(qTarget, codes) {
-    let check = false;
-    let arr_codes = codes.split(",");
-    arr_codes.forEach(code => {
-        if (qTarget.isChecked(parseInt(code))) check = true;
-    });
-    return check;
-};
-
 function addImages(Q, name, placement) {
     let objName;
     switch (Q.type) {

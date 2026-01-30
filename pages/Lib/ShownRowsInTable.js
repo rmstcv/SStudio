@@ -6,7 +6,7 @@ ${globalVars.titleTextTagClose}
 ${globalVars.textSubTagOpen}
 Q1 - числовой вопрос, следующий - табличный с максимально необходимым количеством строк (коды значения не имеют). 
 В нём скрипт перед показом:
-${globalVars.texttextSubTagOpenTagClose}
+${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 let num = Q1.openValueInt;
 let rowCodes = Q.rows.getCodes();

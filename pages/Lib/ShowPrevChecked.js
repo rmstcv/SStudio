@@ -22,6 +22,35 @@ for (let A of Q1.getChecked()) {
 
 return Q[objName].visibleCount > 0 ? ok : skip;
 ${globalVars.codeTagClose}
+${globalVars.textTagOpen}
+Или вызвать в скрипте перед показом функцию:
+${globalVars.textTagClose}
+${globalVars.codeTagOpen}//функция показывает только те ответы, которые были выбраны в другом вопросе
+//srcQ - вопрос, из которого копируются ответы
+//trgQ - вопрос, в который копируются ответы
+//objName - объект ('answers' или 'rows' или 'columns')
+//exclude - массив с кодами ответов, которые не нужно копировать
+//пример вызова - showCheckedAnswers(s1, Q, objName, [99])
+
+//после вызова функции можно добавить - 
+//if (Q[objName].visibleCount === 0) {return skip;}; //пропустить, если нет видимых
+//Q[objName].show(99); //показать код 99
+
+function showCheckedAnswers(srcQ, trgQ, objName, exclude = []) {
+    let trg =  trgQ[objName];
+    trg.hideAll();
+    
+    for (let answer of srcQ.getChecked()) {
+
+        if (exclude.indexOf(answer.code) !== -1) continue;
+        trg.show(answer.code);
+
+        if (answer.flags & AnswerFlags.OpenValueTxt) {
+            trg[answer.code].text = answer.openValueTxt;
+        }
+    }
+}
+${globalVars.codeTagClose}
 `;
 
 let ShowPrevChecked = {

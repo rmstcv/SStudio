@@ -23,6 +23,7 @@ import { ShowRowsConditions } from "./pages/Lib/ShowRowsConditions.js";
 import { CodedGroups } from "./pages/Lib/CodedGroups.js";
 import { SurveyQuality } from "./pages/Lib/SurveyQuality.js";
 import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
+import { CheckExist } from "./pages/Lib/CheckExist.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -80,7 +81,8 @@ const LibData = [
     ShowRowsConditions,
     CodedGroups,
     SurveyQuality,
-    OpenTextsAndZO
+    OpenTextsAndZO,
+    CheckExist
 ];
 
 const PropData = [
