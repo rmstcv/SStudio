@@ -55,6 +55,8 @@ import { IntersectionOfArr } from "./pages/JSstandard/IntersectionOfArr.js";
 import { ArrayIterations } from "./pages/JSstandard/ArrayIterations.js";
 import { ConcatArr } from "./pages/JSstandard/ConcatArr.js";
 import { GetDateAndDay } from "./pages/JSstandard/GetDateAndDay.js";
+import { BreakCont } from "./pages/JSstandard/BreakCont.js";
+
 
 const FunctionsData = [
     dataFunctions,
@@ -108,7 +110,8 @@ const JSstandardData = [
       ArrayIterations,
       ConcatArr,
       GetDateAndDay,
-      RandomNum
+      RandomNum,
+      BreakCont
 ];
 
 const SurveySystem = [
