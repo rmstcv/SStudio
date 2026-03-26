@@ -18,9 +18,42 @@ ${globalVars.textTagOpen}Q.
     commentLocalizations
     plainComment
     condition
-    flags (Устарело)
-    questionFlags
-    surveyFlags
+    settings
+        .randomizeAnswers
+        .swapRowsAndColumns
+        .exportInCategoricalMode
+        .skipExport
+        .disableAudioRecording
+        .keepExportOV
+        .exportInAlternativeFlagsMode
+        .allowFractionalNumbers
+        .showAutoAnswerProgress
+        .rotateAnswers
+        .verticalTextInColumnHeaders
+        .customValidation
+        .enableAudioRecording
+        .forceSilentAudioRecording
+        .enableGPS
+        .enableGeoCoder
+        .useDatePicker
+        .useTimePicker
+        .enableFileAttachments
+        .enableSignatureAttachment
+        .allowEmptySignature
+        .showRowsOneByOne
+        .enableSearchField
+        .disableHidingOpenValue
+        .showGroupsWithCollapsedView
+        .grouppingAllNotRequired
+        .highlightTrackBeforeSliderHandle
+        .canSkip
+        .useBarcodeScanner1D
+        .useBarcodeScanner2D
+        .hideGoBackButton
+        .hideGoFirstButton
+        .hideInterruptButton
+        .autoSubmitSingleChoice
+        .disableClipboardPaste
     minAnswerCount
     maxAnswerCount
     columnCount
