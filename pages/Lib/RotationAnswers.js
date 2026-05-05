@@ -19,6 +19,10 @@ ${globalVars.textSubTagOpen}
 
 Если нужно перемешать ответы группами, коды которых идут не по порядку, то нужно упорядочить их в списке в такой последовательности, в которой их нужно перемешать. Напрмер, если порядок категорий в списке 1,2,13,14,3,4,5, то Q.answers.randomizeGroups([[1,13], [14,5]]) перемешает группы 1,2,13 и 14,3,4,5.
 ${globalVars.textSubTagClose}
+${globalVars.textSubTagOpen}
+При ротации можно проверить, что вопрос не был уже отвечен, что бы сохранить ротацию при возврате назад:
+if (!Q.isAnswered) {Q.answers.randomizeGroups([])} 
+${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 Q.answers.randomizeGroups([[1,2], [3,8], [9,9]]); //перемешать группы
 Q.answers.randomize([1,2]); //перемешать ответы внутри групп

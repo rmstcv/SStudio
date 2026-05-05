@@ -40,7 +40,9 @@ const HEADER_NAV_ITEMS = [
       CodedGroups,
       SurveyQuality,
       OpenTextsAndZO,
-      CheckExist
+      CheckExist,
+      Attachments,
+      OptionalAnswer
     `
   },
       {
@@ -59,7 +61,9 @@ const HEADER_NAV_ITEMS = [
     object_name: "Функции",
     descr: "description",
     properties: `
-      Functions
+      Functions,
+      ClearTestInfoFunc,
+      AnswerExistsOnly
     `
   },
       {

@@ -1,5 +1,6 @@
 //Functions
 import { dataFunctions } from "./pages/Func/Functions.js";
+import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
 
 //Lib
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
@@ -24,6 +25,9 @@ import { CodedGroups } from "./pages/Lib/CodedGroups.js";
 import { SurveyQuality } from "./pages/Lib/SurveyQuality.js";
 import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
 import { CheckExist } from "./pages/Lib/CheckExist.js";
+import { Attachments } from "./pages/Lib/Attachments.js";
+import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
+
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -60,7 +64,8 @@ import { BreakCont } from "./pages/JSstandard/BreakCont.js";
 
 const FunctionsData = [
     dataFunctions,
-    AnswerExistsOnly
+    AnswerExistsOnly,
+    ClearTestInfoFunc
 ];
 
 const LibData = [
@@ -84,7 +89,9 @@ const LibData = [
     CodedGroups,
     SurveyQuality,
     OpenTextsAndZO,
-    CheckExist
+    CheckExist,
+    Attachments,
+    OptionalAnswer
 ];
 
 const PropData = [
