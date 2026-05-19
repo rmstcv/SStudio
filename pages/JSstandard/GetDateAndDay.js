@@ -13,15 +13,18 @@ const secs  = d.getSeconds(); // секунды 0–59
 const dayOfWeek = date.getDay(); // 0 (воскресенье) до 6 (суббота)
 
 ${globalVars.codeTextTagClose}		
-${globalVars.codeTextTagOpen}const d = new Date();
-(new Date()).getTime()
-const year  = d.getFullYear(); // год, напр. 2025
-const month = d.getMonth() + 1; // месяц 1–12 (getMonth() возвращает 0–11)
-const day   = d.getDate(); // число месяца 1–31
-const hours = d.getHours(); // часы 0–23
-const mins  = d.getMinutes(); // минуты 0–59
-const secs  = d.getSeconds(); // секунды 0–59
-const dayOfWeek = date.getDay(); // 0 (воскресенье) до 6 (суббота)
+${globalVars.codeTextTagOpen}const now = new Date();
+console.log(now); // Tue May 19 2026 15:30:45 GMT+0300 (MSK)
+console.log(typeof now); // "object"
+
+// Можно использовать методы
+console.log(now.getHours());     // 15
+console.log(now.getMinutes());   // 30
+console.log(now.getFullYear());  // 2026
+
+// Можно форматировать
+console.log(now.toISOString());   // 2026-05-19T12:30:45.123Z
+console.log(now.toLocaleString()); // 19.05.2026, 15:30:45
 
 ${globalVars.codeTextTagClose}		
 ${globalVars.codeTextTagOpen}const timestamp = Date.now();
