@@ -354,9 +354,9 @@ code {
 }
 
 .clickBtn:hover {
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
   background: var(--glass);
-  box-shadow: var(--shadow-1);
+  /* box-shadow: var(--shadow-1); */
   color: var(--accent-2);
 }
 
