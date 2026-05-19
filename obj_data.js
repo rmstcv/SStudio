@@ -27,7 +27,7 @@ import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
 import { CheckExist } from "./pages/Lib/CheckExist.js";
 import { Attachments } from "./pages/Lib/Attachments.js";
 import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
-
+import { DateAndTime } from "./pages/Lib/DateAndTime.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -91,7 +91,8 @@ const LibData = [
     OpenTextsAndZO,
     CheckExist,
     Attachments,
-    OptionalAnswer
+    OptionalAnswer,
+    DateAndTime
 ];
 
 const PropData = [

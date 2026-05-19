@@ -42,7 +42,8 @@ const HEADER_NAV_ITEMS = [
       OpenTextsAndZO,
       CheckExist,
       Attachments,
-      OptionalAnswer
+      OptionalAnswer,
+      DateAndTime
     `
   },
       {
