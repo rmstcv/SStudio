@@ -51,6 +51,7 @@ ${globalVars.textTagOpen}
 ${globalVars.textTagClose}
 ${globalVars.textSubTagOpen}
 Добавляем в скрипт Подготовка
+(В настройках вопроса: Условие показа = false)
 ${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 questions.repeatIfNot(2, 3, 1);

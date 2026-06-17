@@ -173,13 +173,38 @@ for (let row of Q.rows.getVisible()) {
 ${globalVars.codeTagClose}
 `;
 let data_descr_NotTogetherValidation = `
+${globalVars.textSubTagOpen}
+Ответы 6 и 7 не могут быть выбраны вместе:
+${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 if (Q.answers.isChecked(6) && Q.answers.isChecked(7)) {
     return error(\`Варианты ответа "\${Q.answers[6].text}" и "\${Q.answers[7].text}" не могут быть выбраны вместе\`);
 }
 
 ${globalVars.codeTagClose}
+${globalVars.textSubTagOpen}
+Ответы 6, 7 и 8 не могут быть выбраны вместе:
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+let answers_arr = [];
+const textParts = [];
+
+[5,6,7].forEach((item) => {
+
+    if (Q.answers.isChecked(item)) {
+        textParts.push(\`"\${Q.answers[item].text}"\`);
+        answers_arr.push(item);
+    }
+});
+
+const answers_str = textParts.join(', ');
+
+if (answers_arr.length > 1) {
+    return error(\`ответы \${answers_str} не могут быть выбраны вместе\`);
+}
+${globalVars.codeTagClose}
 `;
+
 const TextLenValidation = {id:'TextLenValidation', name:'Длина текста', sub:'', descr: data_descr_TextLenValidation};
 const IntegerValidation = {id:'IntegerValidation', name:'Проверка ввода числа', sub:'', descr: data_descr_IntegerValidation};
 const RequireAnswerValidation = {id:'RequireAnswerValidation', name:'Проверка корректности чисел из нескольких вопросов', sub:'', descr: data_descr_RequireAnswerValidation};
