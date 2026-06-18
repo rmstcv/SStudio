@@ -6,7 +6,7 @@ ${globalVars.titleTextTagClose}
 ${globalVars.codeTextTagOpen}Выбрать элементы по условию → filter
     [3,7].filter(x => [1,2,3].indexOf(x) !== -1); // [3]
 Проверить наличие конкретного примитива → indexOf (или includes)
-    [1,2,3].indexOf(1) !== -1); // true
+    [1,2,3].indexOf(1) !== -1; // true
 Найти первый подходящий элемент → find
     [1,2,3,4].find(n => n > 2); // 3
 Получить индекс по условию → findIndex (в отличие от indexOf(NaN) -> -1)

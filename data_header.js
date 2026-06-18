@@ -39,7 +39,11 @@ const HEADER_NAV_ITEMS = [
       ShowRowsConditions,
       CodedGroups,
       SurveyQuality,
-      OpenTextsAndZO
+      OpenTextsAndZO,
+      CheckExist,
+      Attachments,
+      OptionalAnswer,
+      DateAndTime
     `
   },
       {
@@ -58,7 +62,9 @@ const HEADER_NAV_ITEMS = [
     object_name: "Функции",
     descr: "description",
     properties: `
-      Functions
+      Functions,
+      ClearTestInfoFunc,
+      AnswerExistsOnly
     `
   },
       {
@@ -77,7 +83,8 @@ const HEADER_NAV_ITEMS = [
       ArrayIterations,
       ConcatArr,
       GetDateAndDay,
-      RandomNum
+      RandomNum,
+      BreakCont
     `
   },
 ];

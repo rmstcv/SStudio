@@ -10,7 +10,29 @@ let question4 = q_1; // используя шаблон
 ${globalVars.codeTextTagClose}
 ${globalVars.textTagOpen}Q.
     number
-    type
+    type.
+        QuestionTypeId.
+            WelcomeScreen
+            Information
+            Text
+            Phone
+            Email
+            DateTime
+            Numeric
+            SingleChoice
+            MultipleChoice
+            Dropdown_SingleChoice
+            Dropdown_MultipleChoice
+            Ranking
+            Rating
+            Slider
+            ClickTest_Text
+            Table_Text
+            Table_Numeric
+            Table_SingleChoice
+            Table_MultipleChoice
+            Table_Rating
+            MaxDiff
     text
     textLocalizations
     plainText
@@ -18,9 +40,42 @@ ${globalVars.textTagOpen}Q.
     commentLocalizations
     plainComment
     condition
-    flags (Устарело)
-    questionFlags
-    surveyFlags
+    settings.
+        randomizeAnswers
+        swapRowsAndColumns
+        exportInCategoricalMode
+        skipExport
+        disableAudioRecording
+        keepExportOV
+        exportInAlternativeFlagsMode
+        allowFractionalNumbers
+        showAutoAnswerProgress
+        rotateAnswers
+        verticalTextInColumnHeaders
+        customValidation
+        enableAudioRecording
+        forceSilentAudioRecording
+        enableGPS
+        enableGeoCoder
+        useDatePicker
+        useTimePicker
+        enableFileAttachments
+        enableSignatureAttachment
+        allowEmptySignature
+        showRowsOneByOne
+        enableSearchField
+        disableHidingOpenValue
+        showGroupsWithCollapsedView
+        grouppingAllNotRequired
+        highlightTrackBeforeSliderHandle
+        canSkip
+        useBarcodeScanner1D
+        useBarcodeScanner2D
+        hideGoBackButton
+        hideGoFirstButton
+        hideInterruptButton
+        autoSubmitSingleChoice
+        disableClipboardPaste
     minAnswerCount
     maxAnswerCount
     columnCount

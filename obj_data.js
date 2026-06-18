@@ -1,5 +1,6 @@
 //Functions
 import { dataFunctions } from "./pages/Func/Functions.js";
+import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
 
 //Lib
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
@@ -23,6 +24,10 @@ import { ShowRowsConditions } from "./pages/Lib/ShowRowsConditions.js";
 import { CodedGroups } from "./pages/Lib/CodedGroups.js";
 import { SurveyQuality } from "./pages/Lib/SurveyQuality.js";
 import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
+import { CheckExist } from "./pages/Lib/CheckExist.js";
+import { Attachments } from "./pages/Lib/Attachments.js";
+import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
+import { DateAndTime } from "./pages/Lib/DateAndTime.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -54,10 +59,13 @@ import { IntersectionOfArr } from "./pages/JSstandard/IntersectionOfArr.js";
 import { ArrayIterations } from "./pages/JSstandard/ArrayIterations.js";
 import { ConcatArr } from "./pages/JSstandard/ConcatArr.js";
 import { GetDateAndDay } from "./pages/JSstandard/GetDateAndDay.js";
+import { BreakCont } from "./pages/JSstandard/BreakCont.js";
+
 
 const FunctionsData = [
     dataFunctions,
-    AnswerExistsOnly
+    AnswerExistsOnly,
+    ClearTestInfoFunc
 ];
 
 const LibData = [
@@ -80,7 +88,11 @@ const LibData = [
     ShowRowsConditions,
     CodedGroups,
     SurveyQuality,
-    OpenTextsAndZO
+    OpenTextsAndZO,
+    CheckExist,
+    Attachments,
+    OptionalAnswer,
+    DateAndTime
 ];
 
 const PropData = [
@@ -106,7 +118,8 @@ const JSstandardData = [
       ArrayIterations,
       ConcatArr,
       GetDateAndDay,
-      RandomNum
+      RandomNum,
+      BreakCont
 ];
 
 const SurveySystem = [

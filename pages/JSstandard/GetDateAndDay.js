@@ -13,11 +13,51 @@ const secs  = d.getSeconds(); // секунды 0–59
 const dayOfWeek = date.getDay(); // 0 (воскресенье) до 6 (суббота)
 
 ${globalVars.codeTextTagClose}		
+${globalVars.codeTextTagOpen}const now = new Date();
+console.log(now); // Tue May 19 2026 15:30:45 GMT+0300 (MSK)
+console.log(typeof now); // "object"
+
+// Можно использовать методы
+console.log(now.getHours());     // 15
+console.log(now.getMinutes());   // 30
+console.log(now.getFullYear());  // 2026
+
+// Можно форматировать
+console.log(now.toISOString());   // 2026-05-19T12:30:45.123Z
+console.log(now.toLocaleString()); // 19.05.2026, 15:30:45
+
+${globalVars.codeTextTagClose}		
+${globalVars.codeTextTagOpen}const timestamp = Date.now();
+console.log(timestamp); // 1747657845123 (миллисекунды с 1 января 1970)
+console.log(typeof timestamp); // "number"
+
+// Нельзя использовать методы даты
+// timestamp.getHours() Ошибка!
+
+// Нужно создать объект из timestamp
+const dateFromTimestamp = new Date(timestamp);
+console.log(dateFromTimestamp.getHours()); // 15
+
+${globalVars.codeTextTagClose}
+${globalVars.textTagOpen}Получение timestamp из Date.now() и new Date():
+${globalVars.textTagClose}
+${globalVars.codeTextTagOpen}// Способ 1: Date.now() - напрямую
+const ts1 = Date.now();
+
+// Способ 2: из объекта Date
+const ts2 = new Date().getTime();
+
+// Способ 3: из объекта Date (альтернативный)
+const ts3 = +new Date();
+
+console.log(ts1 === ts2); // true (оба метода дают одинаковый результат)
+
+${globalVars.codeTextTagClose}		
 `;
 
 let GetDateAndDay = {
     id: "GetDateAndDay",
-    name: "Дата и день",
+    name: "Дата и время",
     sub: "",
     descr: data_descr 
 };

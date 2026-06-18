@@ -16,7 +16,40 @@ ${globalVars.codeTextTagClose}
 `;
 const data_descr_CreateTables = `${globalVars.textSubTagOpen}
 Квотные таблицы импортируются по отдельности. Для каждой таблицы нужно создавать свой excel файл
+<br>
 ${globalVars.textSubTagClose}
+${globalVars.titleTextTagOpen}
+Формат плоского списка
+${globalVars.titleTextTagClose}
+${globalVars.textSubTagOpen}
+Данный формат представляет собой таблицу, каждая строка которой — счётчик с наименованием, условием и другими его значениями — обычный файл из классического редактора.
+
+В каждой строке таблицы необходимо заполнить от двух до семи ячеек:
+
+Наименование
+Условие
+Условие для квоты (может отсутствовать)
+Значение квоты (число, может отсутствовать)
+Метка (число или строка, может отсутствовать)
+Опции (число, может отсутствовать)
+Комментарий (строка, может отсутствовать)
+В шестой колонке можно использовать следующие значения:
+
+2 — маркер полных интервью
+4 – учитывать только полные интервью
+64 – публичный
+512 – отображать без иерархии
+16 — отображать счетчик жирным шрифтом
+32 — отображать счётчик серым цветом
+1 — скрытый
+256 – скрытый от подрядчика
+
+Если требуется включить несколько опций одному счётчику, то необходимо указывать сумму их чисел. Например, для включения опций Отображать счётчик жирным шрифтом и Отображать счётчик серым цветом нужно указать число 48.
+<br>
+${globalVars.textSubTagClose}
+${globalVars.titleTextTagOpen}
+Формат древовидного списка
+${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
 Таблица без вложенностей
 ${globalVars.textTagClose}
@@ -56,8 +89,10 @@ ${globalVars.textSubTagClose}
 <br/>
 <img src="images/quotas/q_nest2_table_ss.jpg" alt="q_nest2_table_ss" width="400">
 `;
-
 const data_descr_CreateTablesRequirements = `
+${globalVars.textSubTagOpen}
+Требования для таблиц формата древовидного списка
+${globalVars.textSubTagClose}
 ${globalVars.textTagOpen}<ul>
 <li>Указанные списки значений работают только для текстовых, числовых вопросов, также вопросов с единственным выбором ответа.</li>
 <li>Все данные располагаются на первом листе.</li>
@@ -94,8 +129,7 @@ ${globalVars.textTagOpen}<ul>
 </ul>
 ${globalVars.textTagClose}
 `;
-
-const data_descr_ExpressionSyntax= `${globalVars.textTagOpen}
+const data_descr_ExpressionSyntax = `${globalVars.textTagOpen}
 Единственный и множественный выбор
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}Q1 = 2 - Выбран ответ с кодом 2.
