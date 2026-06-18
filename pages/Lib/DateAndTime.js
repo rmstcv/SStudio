@@ -61,6 +61,53 @@ ${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 Q.defaultValue = '22.11.1984 15:36';
 ${globalVars.codeTagClose}
+${globalVars.titleTextTagOpen}
+Определить день недели:
+${globalVars.titleTextTagClose}
+${globalVars.textSubTagOpen}
+Категории в вопросе:
+1	Понедельник
+2	Вторник
+3	Среда
+4	Четверг
+5	Пятница
+6	Суббота
+7	Воскресенье
+
+Добавить в скрипт перед показом:
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+const date = new Date(); // Текущая дата
+const dayOfWeek = date.getDay(); // 0 (воскресенье) до 6 (суббота)
+
+switch (dayOfWeek) {
+    case 0:
+        day_of_the_week.answers[7].checked = true; // вс
+        break;
+    case 1:
+        day_of_the_week.answers[1].checked = true; // пн
+        break;
+    case 2:
+        day_of_the_week.answers[2].checked = true; // вт
+        break;
+    case 3:
+        day_of_the_week.answers[3].checked = true; // ср
+        break;
+    case 4:
+        day_of_the_week.answers[4].checked = true; // чт
+        break;
+    case 5:
+        day_of_the_week.answers[5].checked = true; // пт
+        break;
+    case 6:
+        day_of_the_week.answers[6].checked = true; // сб
+        break;
+    //default:
+        //dayName = "Неизвестный день"; // На всякий случай
+}
+
+return testAnswered(Q)
+${globalVars.codeTagClose}
 `;
 
 let DateAndTime = {
