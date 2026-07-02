@@ -3,6 +3,7 @@ import { dataFunctions } from "./pages/Func/Functions.js";
 import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
 
 //Lib
+import { SaveAnswers } from "./pages/Lib/SaveAnswers.js";
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
 import { ShowPrevChecked } from "./pages/Lib/ShowPrevChecked.js";
 import { CopyAnswers } from "./pages/Lib/CopyAnswers.js";
@@ -70,6 +71,7 @@ const FunctionsData = [
 ];
 
 const LibData = [
+    SaveAnswers,
     AgeRecode,
     ShowPrevChecked,
     CopyAnswers,

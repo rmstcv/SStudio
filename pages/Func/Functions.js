@@ -10,6 +10,8 @@ ${globalVars.codeTagOpen}function AnswerExistsAny(qTarget, codes) {
     return check;
 }
 
+// Если необходимо сохранить ответы, то в скрипте перед показом добавить if (Q.isAnswered) return testAnswered(Q);
+// Это так же необходимо, например, когда замеряется время в вопросе. Иначе анкета при проверке и отправке получит новые значения
 function testAnswered(Q) {
     if (isTesting()) {
         let text = "&lt;font color='red'&gt;ЭКРАН БУДЕТ ВИДЕН ТОЛЬКО НА ТЕСТОВОЙ ССЫЛКЕ&lt;/font&gt;&lt;br&gt;" + Q.text;

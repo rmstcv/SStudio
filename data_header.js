@@ -19,6 +19,7 @@ const HEADER_NAV_ITEMS = [
     object_name: "Как сделать",
     descr: "description",
     properties: `
+      SaveAnswers,
       AgeRecode,
       ShowPrevChecked,
       CopyAnswers,
