@@ -60,7 +60,8 @@ import { ArrayIterations } from "./pages/JSstandard/ArrayIterations.js";
 import { ConcatArr } from "./pages/JSstandard/ConcatArr.js";
 import { GetDateAndDay } from "./pages/JSstandard/GetDateAndDay.js";
 import { BreakCont } from "./pages/JSstandard/BreakCont.js";
-
+import { ArraySubtraction } from "./pages/JSstandard/ArraySubtraction.js";
+import { MaxArray } from "./pages/JSstandard/MaxArray.js";
 
 const FunctionsData = [
     dataFunctions,
@@ -119,7 +120,9 @@ const JSstandardData = [
       ConcatArr,
       GetDateAndDay,
       RandomNum,
-      BreakCont
+      BreakCont,
+      ArraySubtraction,
+      MaxArray
 ];
 
 const SurveySystem = [

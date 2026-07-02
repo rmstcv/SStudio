@@ -84,7 +84,9 @@ const HEADER_NAV_ITEMS = [
       ConcatArr,
       GetDateAndDay,
       RandomNum,
-      BreakCont
+      BreakCont,
+      ArraySubtraction,
+      MaxArray
     `
   },
 ];

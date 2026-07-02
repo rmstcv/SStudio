@@ -7,7 +7,7 @@ ${globalVars.textTagOpen}
 В вопрос:
 ${globalVars.textTagClose}
 ${globalVars.codeTextTagOpen}
-Q.image = images['Изображение1']; // добаляет Изображение1.jpg
+Q.image = images['Изображение1']; // добавляет Изображение1.jpg
 Q.imagePlacement = ImagePlacementIds.Right; // Before - над текстом. After - под текстом. Left - слева от текста. Right - справа от текста.
 Q.image = images['Изображение_' + Q.number % 100]; // в цикле
 ${globalVars.codeTextTagClose}
