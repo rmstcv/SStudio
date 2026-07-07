@@ -87,7 +87,8 @@ const HEADER_NAV_ITEMS = [
       RandomNum,
       BreakCont,
       ArraySubtraction,
-      MaxArray
+      MaxArray,
+      TypesConvert
     `
   },
 ];

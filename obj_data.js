@@ -63,6 +63,7 @@ import { GetDateAndDay } from "./pages/JSstandard/GetDateAndDay.js";
 import { BreakCont } from "./pages/JSstandard/BreakCont.js";
 import { ArraySubtraction } from "./pages/JSstandard/ArraySubtraction.js";
 import { MaxArray } from "./pages/JSstandard/MaxArray.js";
+import { TypesConvert } from "./pages/JSstandard/TypesConvert.js";
 
 const FunctionsData = [
     dataFunctions,
@@ -124,7 +125,8 @@ const JSstandardData = [
       RandomNum,
       BreakCont,
       ArraySubtraction,
-      MaxArray
+      MaxArray,
+      TypesConvert
 ];
 
 const SurveySystem = [
