@@ -46,6 +46,31 @@ Q41.getCodes().forEach((code) => questions[230 + code].randomize()); // пере
 questions.repeat(24, 24, 41);
 Q41.getCodes().forEach((code) => questions[240 + code].answers.setOrder(questions[230 + code].getCodes())); // порядок ответов в Q24 как в Q23
 ${globalVars.codeTagClose}
+${globalVars.textSubTagOpen}
+Одинаковая ротация во всем цикле
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+questions.repeat(11, 11, 10);
+
+let q6Codes = q6.getCodes();
+
+if (q6Codes.length > 0 ) {
+    let firstQ6Code = q6Codes[0];
+    let firstS1x = questions[1100 + firstQ6Code];
+
+    firstS1x.answers.randomizeGroups([[100,6], [200,30]]);
+    firstS1x.answers.randomizeFromTo(1,6);
+    firstS1x.answers.randomizeFromTo(5,30);
+
+    let orderS1xCodes = questions[1100 + firstQ6Code].getCodes();
+    
+    for (let i = 1; i < q6Codes.length; i++) {
+        const q6Code = q6Codes[i];
+        const s1x = questions[1100 + q6Code];
+        s1x.answers.setOrder(orderS1xCodes);
+    }
+}
+${globalVars.codeTagClose}
 `;
 
 let RotationAnswers = {

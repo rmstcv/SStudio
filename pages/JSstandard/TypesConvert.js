@@ -45,13 +45,8 @@ Number.isInteger(5) // true
 ${globalVars.codeTextTagClose}	
 ${globalVars.textTagOpen}Автоматическое преобразование
 ${globalVars.textTagClose}
-${globalVars.codeTextTagOpen}// Строка + число = строка
+${globalVars.codeTextTagOpen}// Математика → число
 "5" + 3             // "53"
-
-// Число + строка = строка
-5 + "3"             // "53"
-
-// Математика → число
 "5" - 3             // 2
 "5" * "2"           // 10
 "10" / 2            // 5
