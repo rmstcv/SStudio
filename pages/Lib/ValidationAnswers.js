@@ -183,21 +183,21 @@ if (Q.answers.isChecked(6) && Q.answers.isChecked(7)) {
 
 ${globalVars.codeTagClose}
 ${globalVars.textSubTagOpen}
-Ответы 6, 7 и 8 не могут быть выбраны вместе:
+Ответы 5, 6 и 7 не могут быть выбраны вместе:
 ${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
 let answers_arr = [];
-const textParts = [];
+let textParts = [];
 
 [5,6,7].forEach((item) => {
 
     if (Q.answers.isChecked(item)) {
-        textParts.push(\`"\${Q.answers[item].text}"\`);
+        textParts.push(\`"\${Q.answers[item].plainText}"\`);
         answers_arr.push(item);
     }
 });
 
-const answers_str = textParts.join(', ');
+let answers_str = textParts.join(', ');
 
 if (answers_arr.length > 1) {
     return error(\`ответы \${answers_str} не могут быть выбраны вместе\`);
