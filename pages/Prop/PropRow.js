@@ -48,7 +48,49 @@ ${globalVars.textTagOpen}Q.rows[code].
     leftTitle
     rightTitle
     leftTitleLocalizations
-    rightTitleLocalizations
+    rightTitleLocalizations${globalVars.textTagOpen}
+    settings${globalVars.textTagClose}${globalVars.textSubTagOpen}
+    Опции строки табличного вопроса, изменяющие различные её свойства.
+    Принимают и возвращают значения true и false.
+    !!!
+    Опции, влияющие на структуру массива, следует включать/выключать в скрипте Подготовка. 
+    Если включить, например, флаг С открытым значением (текст) в скрипте перед показом, 
+    то текстовое поле в вопросе появится, но введённый текст в массив НЕ попадёт.
+    !!!
+    ${globalVars.textSubTagClose}
+        openValueNum
+        openValueTxt
+        multilineTxt
+        blocking
+        blockingInTheGroup
+        alwaysVisible
+        disableReordering
+        disableRepeat
+        skipExport
+        skipExportOV
+        hideInRespondentMode
+        allowFractionalNumbers
+        allowEmptyOpenValue
+        hideCode
+        hideText
+        firstColumnBottom
+        useDatePicker
+        useTimePicker
+        customRowValidation
+        hideInRespondentMode
+        ${globalVars.textSubTagOpen}
+        Примеры использования:
+        ${globalVars.textSubTagClose}${globalVars.codeTextTagOpen}
+        // Добавить строке 5 числовое поле 
+        Q.rows[5].settings.openValueNum = true;
+        // Разрешить его не заполнять
+        Q.rows[5].settings.allowEmptyOpenValue = true;
+
+        // Если у строки 98 есть текстовое поле…
+        if (Q.rows[98].settings.openValueTxt) {
+            // … что-то сделать
+        }
+        ${globalVars.codeTextTagClose}
 ${globalVars.textTagClose}
 `;
 

@@ -15,7 +15,13 @@ Q[objName].hideAll();
 for (let A of Q1.getChecked()) {
     Q[objName].show(A.code);
 
-    if (A.flags & AnswerFlags.OpenValueTxt) {
+    // старый метод
+    // if (A.flags & AnswerFlags.OpenValueTxt) {
+    //     Q[objName][A.code].text = A.openValueTxt;
+    // }
+
+    // новый метод
+    if (A.settings.openValueTxt) {
         Q[objName][A.code].text = A.openValueTxt;
     }
 }

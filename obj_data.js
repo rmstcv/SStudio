@@ -29,6 +29,8 @@ import { CheckExist } from "./pages/Lib/CheckExist.js";
 import { Attachments } from "./pages/Lib/Attachments.js";
 import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
 import { DateAndTime } from "./pages/Lib/DateAndTime.js";
+import { SomeConditions } from "./pages/Lib/SomeConditions.js";
+import { Recode } from "./pages/Lib/Recode.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -96,7 +98,9 @@ const LibData = [
     CheckExist,
     Attachments,
     OptionalAnswer,
-    DateAndTime
+    DateAndTime,
+    SomeConditions,
+    Recode
 ];
 
 const PropData = [

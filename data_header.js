@@ -44,7 +44,9 @@ const HEADER_NAV_ITEMS = [
       CheckExist,
       Attachments,
       OptionalAnswer,
-      DateAndTime
+      DateAndTime,
+      SomeConditions,
+      Recode
     `
   },
       {
