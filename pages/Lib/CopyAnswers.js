@@ -20,11 +20,13 @@ function copyAnswers(qn, except) {
 
         qA.checked = true;
 
-        if (qA.flags & AnswerFlags.OpenValueNum) {
+        // if (qA.flags & AnswerFlags.OpenValueNum) {
+        if (qA.settings.openValueTxt.OpenValueNum) {
             qA.openValueNum = A.openValueNum;
         }
 
-        if (qA.flags & AnswerFlags.OpenValueTxt) {
+        //if (qA.flags & AnswerFlags.OpenValueTxt) {
+        if (qA.settings.OpenValueTxt) {
             qA.openValueTxt = A.openValueTxt;
         }
     }

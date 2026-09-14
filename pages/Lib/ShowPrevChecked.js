@@ -51,7 +51,8 @@ function showCheckedAnswers(srcQ, trgQ, objName, exclude = []) {
         if (exclude.indexOf(answer.code) !== -1) continue;
         trg.show(answer.code);
 
-        if (answer.flags & AnswerFlags.OpenValueTxt) {
+        // if (answer.flags & AnswerFlags.OpenValueTxt) {
+         if (answer.settings.OpenValueTxt) {
             trg[answer.code].text = answer.openValueTxt;
         }
     }

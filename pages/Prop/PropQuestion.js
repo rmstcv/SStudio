@@ -112,6 +112,16 @@ ${globalVars.textTagOpen}Q.
     rightTitle
     leftTitleLocalizations
     rightTitleLocalizations
+    sourceAnswerCode
+    sourceQuestionNumber
+    currentIterationQuestions
+    answersSumControlMode
+    answersSumControlTarget
+    answersSumControlUnit
+    getClickedRegionCodes()
+    hideRegionsWithCodes(code, codes)
+    showRegionsWithCodes(code, codes)
+    hasClickByRegion(code)
 ${globalVars.textTagClose}
 `;
 
