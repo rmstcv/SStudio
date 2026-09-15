@@ -21,6 +21,41 @@ ${globalVars.codeTagOpen}
 questions.repeat(2, 2, 1);
 ${globalVars.codeTagClose}
 ${globalVars.textTagOpen}
+sourceAnswerCode
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Для вопросов внутри цикла - код варианта ответа по которому создан (задаётся) этот вопрос цикла.
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+if (Q.sourceAnswerCode == 1) Q.hideFromTo(1, 5); // если вопрос задаётся по ответу с кодом 1 - скрыть ответы с 1 по 5  
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
+sourceQuestionNumber
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Для вопросов внутри цикла - исходный номер вопроса из которого создан этот вопрос цикла.
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+if (Q.sourceQuestionNumber == 10 || Q.sourceQuestionNumber == 11) { // для вопросов 10 & 11 расположенный в цикле
+    let condition = Q9.isChecked(1);  // дополнительное условие - в Q9 должен быть отмечен 1
+    return condition ? ok : skip;  // условие выполняется ? задать : иначе пропустить 
+}
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
+currentIterationQuestions
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Для вопросов внутри цикла - ссылки на другие вопросы находящиеся в этой же итерации цикла. Ключом будет номер исходного вопроса.
+
+Пример: В Q1 ответы с кодами 1, 2, 3.
+По ответам из Q1 повторяются вопросы с Q2 по Q4 (цикл): questions.repeat(1, 2, 4);
+В вопросе Q3 можно получить ссылки на соседние вопросы Q2 и Q4 которые задаются по такому же коду ответа (в этой же итерации):
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+let q2 = Q.currentIterationQuestions[2]; // вопрос Q2 в этой итерации 
+if (q2.isChecked(1)) return skip; // если в вопросе Q2 был выбран ответ 1 - пропустить вопрос
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
 Не задавать Q для ответа 3:
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
@@ -62,42 +97,6 @@ ${globalVars.textTagClose}
 ${globalVars.textSubTagOpen}
 переносим необходимые ответы из табличного вопроса в обычный и создаём цикл по нему
 ${globalVars.textSubTagClose}
-${globalVars.textTagOpen}
-sourceAnswerCode
-${globalVars.textTagClose}
-${globalVars.textSubTagOpen}
-Для вопросов внутри цикла - код варианта ответа по которому создан (задаётся) этот вопрос цикла.
-${globalVars.textSubTagClose}
-${globalVars.codeTagOpen}
-if (Q.sourceAnswerCode == 1) Q.hideFromTo(1, 5); // если вопрос задаётся по ответу с кодом 1 - скрыть ответы с 1 по 5  
-${globalVars.codeTagClose}
-${globalVars.textTagOpen}
-sourceQuestionNumber
-${globalVars.textTagClose}
-${globalVars.textSubTagOpen}
-Для вопросов внутри цикла - исходный номер вопроса из которого создан этот вопрос цикла.
-${globalVars.textSubTagClose}
-${globalVars.codeTagOpen}
-if (Q.sourceQuestionNumber == 10 || Q.sourceQuestionNumber == 11) { // для вопросов 10 & 11 расположенный в цикле
-    let condition = Q9.isChecked(1);  // дополнительное условие - в Q9 должен быть отмечен 1
-    return condition ? ok : skip;  // условие выполняется ? задать : иначе пропустить 
-}
-${globalVars.codeTagClose}
-${globalVars.textTagOpen}
-currentIterationQuestions
-${globalVars.textTagClose}
-${globalVars.textSubTagOpen}
-Для вопросов внутри цикла - ссылки на другие вопросы находящиеся в этой же итерации цикла. Ключом будет номер исходного вопроса.
-
-Пример: В Q1 ответы с кодами 1, 2, 3.
-По ответам из Q1 повторяются вопросы с Q2 по Q4 (цикл): questions.repeat(1, 2, 4);
-В вопросе Q3 можно получить ссылки на соседние вопросы Q2 и Q4 которые задаются по такому же коду ответа (в этой же итерации):
-${globalVars.textSubTagClose}
-${globalVars.codeTagOpen}
-let q2 = Q.currentIterationQuestions[2]; // вопрос Q2 в этой итерации 
-if (q2.isChecked(1)) return skip; // если в вопросе Q2 был выбран ответ 1 - пропустить вопрос
-${globalVars.codeTagClose}
-
 `;
 
 let RepeatQuestions = {
