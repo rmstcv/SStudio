@@ -1,6 +1,84 @@
 import globalVars from "../../globalVars.js";
 
-let data_descr = `${globalVars.titleTextTagOpen}Перекодировка для сокращения числа категорий
+let data_descr = `
+${globalVars.titleTextTagOpen}Перекодировка для сокращения числа категорий
+(простой случай)
+${globalVars.titleTextTagClose}
+${globalVars.textTagOpen}
+Q1 - вопрос (простой многоответный), в котором выбираем категории (большой список)
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Список ответов = список Q1
+${globalVars.textSubTagClose}
+${globalVars.textTagOpen}
+Q2 - вопрос (таблица: единственный выбор), в котором происходит перекодировка.
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Список строк = спсисок Q2 (максимальное количество ответов, которым надо ограничиться).
+Список ответов = список Q1
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}if (AnswerExistsAny(Q1, "99")) {
+    return skip;
+}
+
+let allAnswersQ1 = Q1.answers.getCheckedCodes();
+Q.columns.hideAll();
+Q.rows.hideAll();
+
+let iter = allAnswersQ1.length;
+
+// ограничиваем количество ответов
+if (iter > Q.rows.getAll().length) {
+    iter = Q.rows.getAll().length;
+}
+
+// выбираем и показывем соответсвие. каждая строка соответсвует одному ответу из Q1.
+// в дальнейшем по этому вопросу будем сопоставлять итерацию (в строке) и категорию (в столбце - один ответ)
+for (let index = 1; index <= iter; index++) {
+    let answerQ1 = allAnswersQ1[index - 1]
+    
+    Q.rows[index].answers[answerQ1].checked = true
+    Q.columns[answerQ1].show();
+    Q.rows[index].show();
+}
+
+return testAnswered(Q);
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
+Q3 - вопрос (простой многоответный), по которому будут задаваться вопросы цикла (проставляем в него все строки из Q2)
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Список строк = спсисок Q2 (максимальное количество ответов, которым надо ограничиться).
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}if (AnswerExistsAny(Q1, "99")) {
+    return skip
+}
+
+let objName = 'answers';
+
+// отмечаем все возможные итерации (строки из Q2)
+for (let A of Q2.rows.getAll()) {
+
+    if (Q2.rows[A.code].getChecked().length > 0) {
+        Q[objName][A.code].checked = true;
+        Q[objName][A.code].text = Q2.rows[A.code].getChecked()[0].text;
+    }
+}
+
+return testAnswered(Q);
+${globalVars.codeTagClose}
+${globalVars.textTagOpen}
+Далее задаем все вопросы цикла по Q3 (например, Q4 и Q5)
+${globalVars.textTagClose}
+${globalVars.textSubTagOpen}
+Скрипт подготовки анкеты перед запуском
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+questions.repeat(4, 5, 3);
+${globalVars.codeTagClose}
+
+
+${globalVars.titleTextTagOpen}Перекодировка для сокращения числа категорий
 (cлучай, когда категории лежат внутри цикла)
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
