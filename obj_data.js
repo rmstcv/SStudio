@@ -25,6 +25,7 @@ import { ShowRowsConditions } from "./pages/Lib/ShowRowsConditions.js";
 import { CodedGroups } from "./pages/Lib/CodedGroups.js";
 import { SurveyQuality } from "./pages/Lib/SurveyQuality.js";
 import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
+import { OpenNumAndSum } from "./pages/Lib/OpenNumAndSum.js";
 import { CheckExist } from "./pages/Lib/CheckExist.js";
 import { Attachments } from "./pages/Lib/Attachments.js";
 import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
@@ -95,6 +96,7 @@ const LibData = [
     CodedGroups,
     SurveyQuality,
     OpenTextsAndZO,
+    OpenNumAndSum,
     CheckExist,
     Attachments,
     OptionalAnswer,

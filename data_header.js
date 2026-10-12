@@ -41,6 +41,7 @@ const HEADER_NAV_ITEMS = [
       CodedGroups,
       SurveyQuality,
       OpenTextsAndZO,
+      OpenNumAndSum,
       CheckExist,
       Attachments,
       OptionalAnswer,
