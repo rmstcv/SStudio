@@ -204,6 +204,19 @@ if (answers_arr.length > 1) {
 }
 ${globalVars.codeTagClose}
 `;
+let data_descr_CheckCheckBox = `
+${globalVars.textSubTagOpen}
+проверка что что то вписано если отмечен чек-бокс
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+for (let answer of Q.answers.getChecked()) { // проверка что что то вписано если отмечен чек-бокс
+
+    if (answer.openValueNum == undefined) {
+        return error('Категория  "' + answer.text + '" выбрана, но в ней нет ответа.')
+    }
+}
+${globalVars.codeTagClose}
+`;
 
 const TextLenValidation = {id:'TextLenValidation', name:'Длина текста', sub:'', descr: data_descr_TextLenValidation};
 const IntegerValidation = {id:'IntegerValidation', name:'Проверка ввода числа', sub:'', descr: data_descr_IntegerValidation};
@@ -215,11 +228,12 @@ const RequireNumAnswerValidation = {id:'RequireNumAnswerValidation', name:'Тр�
 const PhoneValidation = {id:'PhoneValidation', name:'Проверить правильность введённого номера телефона, но разрешить вводить 99 при отказе от ответа', sub:'', descr: data_descr_PhoneValidation};
 const RequireTextAnswerValidation = {id:'RequireTextAnswerValidation', name:'Требовать ответ в необязательной для заполнения строке таблицы с выбором, если заполнено текстовое поле', sub:'', descr: data_descr_RequireTextAnswerValidation};
 const NotTogetherValidation = {id:'NotTogetherValidation', name:'Ответы не могут быть выбраны вместе', sub:'', descr: data_descr_NotTogetherValidation};
+const CheckCheckBox = {id:'CheckCheckBox', name:'Проверка что что то вписано если отмечен чек-бокс', sub:'', descr: data_descr_CheckCheckBox};
 
 const ValidationAnswers = {
     id: "ValidationAnswers", 
     name: "Валидация", 
-    sub: "TextLenValidation,IntegerValidation,RequireAnswerValidation,HighlightValidation,TurnOffValidation,SumValidation,RequireNumAnswerValidation,PhoneValidation,RequireTextAnswerValidation,NotTogetherValidation", 
+    sub: "TextLenValidation,IntegerValidation,RequireAnswerValidation,HighlightValidation,TurnOffValidation,SumValidation,RequireNumAnswerValidation,PhoneValidation,RequireTextAnswerValidation,NotTogetherValidation,CheckCheckBox", 
     descr: data_descr
 };
 
@@ -233,7 +247,8 @@ const ValidationAnswersSubs = [
     RequireNumAnswerValidation,
     PhoneValidation,
     RequireTextAnswerValidation,
-    NotTogetherValidation
+    NotTogetherValidation,
+    CheckCheckBox
 ]
 
 const ValidationAnswersPage = [
