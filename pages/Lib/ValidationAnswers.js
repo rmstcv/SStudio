@@ -217,6 +217,47 @@ for (let answer of Q.answers.getChecked()) { // проверка что что �
 }
 ${globalVars.codeTagClose}
 `;
+let data_descr_CheckSKUInFAMILY = `
+${globalVars.textSubTagOpen}
+проверка что в каждой группе FAMILY выбран хотя бы один SKU
+${globalVars.textSubTagClose}
+${globalVars.codeTagOpen}
+// FAMILY: [SKUs]
+let codesSKU = {
+    7: [701010, 701030, 706010, 706050, 798],
+    64: [6401010, 6401020, 6401030, 6498],
+    998: [98]
+};
+
+let exclCodes = [999,900]; // коды, которые не попадают ни в одну группу FAMILY
+let ansSku = Q.answers.getCheckedCodes(); // выбранные ответы в текущем вопросе
+
+for (let codeFamily of Q8_F.getCheckedCodes()) { // вопрос с FAMILY
+
+    if (exclCodes.indexOf(codeFamily) !== -1) {
+        continue;
+    }
+
+    let skuArr = codesSKU[codeFamily];
+    
+    let exists = ansSku.some(function(sku) { // проверяем для каждой FAMILY, что в массиве с ответами есть хотя бы оди ответ из [SKUs]
+      return skuArr.indexOf(sku) !== -1;
+    });
+
+    if (!exists) {
+
+        let textSku = Q8_F.answers[codeFamily].text;
+
+        if (codeFamily === 998) {
+            textSku = Q8_F.answers[codeFamily].openValueTxt;
+        }
+        
+        return error('Выберите разновидность ' + textSku);
+    }
+
+}
+${globalVars.codeTagClose}
+`;
 
 const TextLenValidation = {id:'TextLenValidation', name:'Длина текста', sub:'', descr: data_descr_TextLenValidation};
 const IntegerValidation = {id:'IntegerValidation', name:'Проверка ввода числа', sub:'', descr: data_descr_IntegerValidation};
@@ -228,12 +269,12 @@ const RequireNumAnswerValidation = {id:'RequireNumAnswerValidation', name:'Тр�
 const PhoneValidation = {id:'PhoneValidation', name:'Проверить правильность введённого номера телефона, но разрешить вводить 99 при отказе от ответа', sub:'', descr: data_descr_PhoneValidation};
 const RequireTextAnswerValidation = {id:'RequireTextAnswerValidation', name:'Требовать ответ в необязательной для заполнения строке таблицы с выбором, если заполнено текстовое поле', sub:'', descr: data_descr_RequireTextAnswerValidation};
 const NotTogetherValidation = {id:'NotTogetherValidation', name:'Ответы не могут быть выбраны вместе', sub:'', descr: data_descr_NotTogetherValidation};
-const CheckCheckBox = {id:'CheckCheckBox', name:'Проверка что что то вписано если отмечен чек-бокс', sub:'', descr: data_descr_CheckCheckBox};
-
+const CheckCheckBox = {id:'CheckCheckBox', name:'Проверка, что что то вписано если отмечен чек-бокс', sub:'', descr: data_descr_CheckCheckBox};
+const CheckSKUInFAMILY = {id:'CheckSKUInFAMILY', name:'В каждой группе FAMILY выбран хотя бы один SKU', sub:'', descr: data_descr_CheckSKUInFAMILY};
 const ValidationAnswers = {
     id: "ValidationAnswers", 
     name: "Валидация", 
-    sub: "TextLenValidation,IntegerValidation,RequireAnswerValidation,HighlightValidation,TurnOffValidation,SumValidation,RequireNumAnswerValidation,PhoneValidation,RequireTextAnswerValidation,NotTogetherValidation,CheckCheckBox", 
+    sub: "TextLenValidation,IntegerValidation,RequireAnswerValidation,HighlightValidation,TurnOffValidation,SumValidation,RequireNumAnswerValidation,PhoneValidation,RequireTextAnswerValidation,NotTogetherValidation,CheckCheckBox,CheckSKUInFAMILY", 
     descr: data_descr
 };
 
@@ -248,7 +289,8 @@ const ValidationAnswersSubs = [
     PhoneValidation,
     RequireTextAnswerValidation,
     NotTogetherValidation,
-    CheckCheckBox
+    CheckCheckBox,
+    CheckSKUInFAMILY
 ]
 
 const ValidationAnswersPage = [
