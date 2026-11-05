@@ -4,15 +4,6 @@ let data_descr = `${globalVars.titleTextTagOpen}
 Проверить существование
 ${globalVars.titleTextTagClose}
 ${globalVars.textTagOpen}
-Проверка, что вариант ответа существует в вопросе
-${globalVars.textTagClose}
-${globalVars.codeTagOpen}
-for (let code of questions[qn].getChecked()) {
-    if !(A.code in Q)) continue;
-        // do something
-}
-${globalVars.codeTagClose}
-${globalVars.textTagOpen}
 Проверка параметра
 ${globalVars.textTagClose}
 ${globalVars.textSubTagOpen}
@@ -48,13 +39,7 @@ ${globalVars.textTagOpen}
 Проверка, что в массиве except есть код answer.code
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
-if (except.indexOf(answer.code) > -1 continue;
-${globalVars.codeTagClose}
-${globalVars.textTagOpen}
-Проверка, что в массиве except есть код answer.code, и что answer.code существует в вопросе 
-${globalVars.textTagClose}
-${globalVars.codeTagOpen}
-if (except.indexOf(answer.code) > -1 || !(answer.code in Q)) continue;
+if (except.indexOf(answer.code)) > -1 continue;
 ${globalVars.codeTagClose}
 `;
 

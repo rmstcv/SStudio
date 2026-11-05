@@ -33,6 +33,7 @@ import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
 import { DateAndTime } from "./pages/Lib/DateAndTime.js";
 import { SomeConditions } from "./pages/Lib/SomeConditions.js";
 import { Recode } from "./pages/Lib/Recode.js";
+import { CheckInAndNotCheck } from "./pages/Lib/CheckInAndNotCheck.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -104,7 +105,8 @@ const LibData = [
     OptionalAnswer,
     DateAndTime,
     SomeConditions,
-    Recode
+    Recode,
+    CheckInAndNotCheck
 ];
 
 const PropData = [

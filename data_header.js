@@ -48,7 +48,8 @@ const HEADER_NAV_ITEMS = [
       OptionalAnswer,
       DateAndTime,
       SomeConditions,
-      Recode
+      Recode,
+      CheckInAndNotCheck
     `
   },
       {
