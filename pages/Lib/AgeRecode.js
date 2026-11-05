@@ -7,7 +7,7 @@ ${globalVars.textTagOpen}
 В скрипт после показа вопроса S2 с возрастом добавить
 ${globalVars.textTagClose}
 ${globalVars.codeTagOpen}
-let age = S2.openValueInt;
+let age = Q.openValueInt;
 if (age < 20 || age > 60) return screenOut();
 ${globalVars.codeTagClose}${globalVars.textTagOpen}В скрипт перед показом в вопрос s2_recode добавить
 ${globalVars.textTagClose}

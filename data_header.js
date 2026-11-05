@@ -21,6 +21,7 @@ const HEADER_NAV_ITEMS = [
     properties: `
       SaveAnswers,
       AgeRecode,
+      CityRecode,
       ShowPrevChecked,
       CopyAnswers,
       CheckAnswers,

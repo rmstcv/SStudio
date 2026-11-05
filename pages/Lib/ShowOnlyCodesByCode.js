@@ -16,7 +16,7 @@ let codes = {
     34: [ 290, [815, 877], 916 ], // выбран 34 - показать 290, 916 и все с 815 по 877
 };
 
-showOnlyCodesByCode(Q560.getCheckedCode());
+showOnlyCodesByCode(Q560.getCheckedCodes());
 
 return Q[objName].visibleCount > 0 ? ok : skip;
 

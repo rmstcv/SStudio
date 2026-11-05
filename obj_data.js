@@ -5,6 +5,7 @@ import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
 //Lib
 import { SaveAnswers } from "./pages/Lib/SaveAnswers.js";
 import { AgeRecode } from "./pages/Lib/AgeRecode.js";
+import { CityRecode } from "./pages/Lib/CityRecode.js";
 import { ShowPrevChecked } from "./pages/Lib/ShowPrevChecked.js";
 import { CopyAnswers } from "./pages/Lib/CopyAnswers.js";
 import { CheckAnswers } from "./pages/Lib/CheckAnswers.js";
@@ -77,6 +78,7 @@ const FunctionsData = [
 const LibData = [
     SaveAnswers,
     AgeRecode,
+    CityRecode,
     ShowPrevChecked,
     CopyAnswers,
     CheckAnswers,
