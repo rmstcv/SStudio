@@ -35,6 +35,7 @@ import { DateAndTime } from "./pages/Lib/DateAndTime.js";
 import { SomeConditions } from "./pages/Lib/SomeConditions.js";
 import { Recode } from "./pages/Lib/Recode.js";
 import { CheckInAndNotCheck } from "./pages/Lib/CheckInAndNotCheck.js";
+import { GetPrior } from "./pages/Lib/GetPrior.js";
 
 //SurveySystem
 import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
@@ -108,7 +109,8 @@ const LibData = [
     DateAndTime,
     SomeConditions,
     Recode,
-    CheckInAndNotCheck
+    CheckInAndNotCheck,
+    GetPrior
 ];
 
 const PropData = [

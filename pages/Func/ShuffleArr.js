@@ -15,12 +15,13 @@ function shuffle(arr) {
         arr[j] = tmp;
     }
     return arr;
+}
 ${globalVars.codeTagClose}
 `;
 
 let ShuffleArr = {
     id: "ShuffleArr",
-    name: "Перемешать массив Fisher–Yates",
+    name: "Перемешать массив",
     sub: "",
     descr: data_descr 
 };

@@ -49,7 +49,8 @@ const HEADER_NAV_ITEMS = [
       DateAndTime,
       SomeConditions,
       Recode,
-      CheckInAndNotCheck
+      CheckInAndNotCheck,
+      GetPrior
     `
   },
       {
