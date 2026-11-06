@@ -1,6 +1,7 @@
 //Functions
 import { dataFunctions } from "./pages/Func/Functions.js";
 import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
+import { ShuffleArr } from "./pages/Func/ShuffleArr.js";
 
 //Lib
 import { SaveAnswers } from "./pages/Lib/SaveAnswers.js";
@@ -73,7 +74,8 @@ import { TypesConvert } from "./pages/JSstandard/TypesConvert.js";
 const FunctionsData = [
     dataFunctions,
     AnswerExistsOnly,
-    ClearTestInfoFunc
+    ClearTestInfoFunc,
+    ShuffleArr
 ];
 
 const LibData = [

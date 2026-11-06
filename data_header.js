@@ -70,7 +70,8 @@ const HEADER_NAV_ITEMS = [
     properties: `
       Functions,
       ClearTestInfoFunc,
-      AnswerExistsOnly
+      AnswerExistsOnly,
+      ShuffleArr
     `
   },
       {

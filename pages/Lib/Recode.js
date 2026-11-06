@@ -132,7 +132,7 @@ for (let i = 1; i <= qInIterAnswers.length; i++) {
     Q.columns.show(qInIterOneAnswerCode);
     Q.rows[i].answers[qInIterOneAnswerCode].checked = true; //и ставим его в строку Q.rows[i]
 
-    if (qInIter.answers[qInIterOneAnswerCode].flags & AnswerFlags.OpenValueTxt) {
+    if (qInIter.answers[qInIterOneAnswerCode].settings.OpenValueTxt) {
         Q.rows[i].answers[qInIterOneAnswerCode].OpenValueTxt = qInIter.answers[qInIterOneAnswerCode].openValueTxt;
     }
 }
@@ -163,7 +163,7 @@ dummy_recode.rows.getVisible().forEach((recodedRow) => {
     qAns.checked = true;
     qAns.text = recodedCol.text;
     
-    if (qInIterAns.flags \& AnswerFlags.OpenValueTxt) {
+    if (qInIterAns.settings.OpenValueTxt) {
        qAns.text = qInIterAns.openValueTxt;
     }
 })
