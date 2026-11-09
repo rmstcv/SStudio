@@ -177,8 +177,10 @@ ${globalVars.textSubTagOpen}
 Ответы 6 и 7 не могут быть выбраны вместе:
 ${globalVars.textSubTagClose}
 ${globalVars.codeTagOpen}
-if (Q.answers.isChecked(6) && Q.answers.isChecked(7)) {
-    return error(\`Варианты ответа "\${Q.answers[6].text}" и "\${Q.answers[7].text}" не могут быть выбраны вместе\`);
+let codes = [6,7];
+
+if (Q.answers.isChecked(codes[0]) && Q.answers.isChecked(codes[1])) {
+    return error(\`Варианты ответа "\${Q.answers[codes[0]].text}" и "\${Q.answers[codes[1]].text}" не могут быть выбраны вместе\`);
 }
 
 ${globalVars.codeTagClose}
