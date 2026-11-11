@@ -2,6 +2,8 @@
 import { dataFunctions } from "./pages/Func/Functions.js";
 import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
 import { ShuffleArr } from "./pages/Func/ShuffleArr.js";
+import { AnswerExistsOnly } from "./pages/Func/AnswerExistsOnly.js";
+import { getArrOtherCodes } from "./pages/Func/AnswerExistsOnly.js";
 
 //Lib
 import { SaveAnswers } from "./pages/Lib/SaveAnswers.js";
@@ -12,7 +14,6 @@ import { CopyAnswers } from "./pages/Lib/CopyAnswers.js";
 import { CheckAnswers } from "./pages/Lib/CheckAnswers.js";
 import { ShowOnlyCodesByCode } from "./pages/Lib/ShowOnlyCodesByCode.js";
 import { VarSubstitution } from "./pages/Lib/VarSubstitution.js";
-import { AnswerExistsOnly } from "./pages/Lib/AnswerExistsOnly.js";
 import { AddImages } from "./pages/Lib/AddImages.js";
 import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
 import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
@@ -76,7 +77,8 @@ const FunctionsData = [
     dataFunctions,
     AnswerExistsOnly,
     ClearTestInfoFunc,
-    ShuffleArr
+    ShuffleArr,
+    getArrOtherCodes
 ];
 
 const LibData = [

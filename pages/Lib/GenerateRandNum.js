@@ -25,7 +25,7 @@ ${globalVars.codeTagClose}
 
 let GenerateRandNum = {
     id: "GenerateRandNum",
-    name: "Сгенерировать случайное число",
+    name: "Случайное число",
     sub: "",
     descr: data_descr 
 };

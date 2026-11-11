@@ -72,7 +72,8 @@ const HEADER_NAV_ITEMS = [
       Functions,
       ClearTestInfoFunc,
       AnswerExistsOnly,
-      ShuffleArr
+      ShuffleArr,
+      getArrOtherCodes
     `
   },
       {
