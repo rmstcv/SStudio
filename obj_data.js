@@ -3,7 +3,7 @@ import { dataFunctions } from "./pages/Func/Functions.js";
 import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
 import { ShuffleArr } from "./pages/Func/ShuffleArr.js";
 import { AnswerExistsOnly } from "./pages/Func/AnswerExistsOnly.js";
-import { getArrOtherCodes } from "./pages/Func/AnswerExistsOnly.js";
+import { getArrOtherCodes } from "./pages/Func/getArrOtherCodes.js";
 
 //Lib
 import { SaveAnswers } from "./pages/Lib/SaveAnswers.js";
