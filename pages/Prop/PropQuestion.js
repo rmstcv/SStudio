@@ -1,0 +1,135 @@
+import globalVars from "../../globalVars.js";
+
+let data_descr = 
+`${globalVars.titleTextTagOpen}Свойства и функции вопроса
+${globalVars.titleTextTagClose}
+${globalVars.codeTextTagOpen}let question1 = Q; // используя параметр Q, который передается в скрипты перед показом и после ответа на вопрос
+let question2 = Q2; // используя глобальные переменные
+let question3 = questions[3]; // используя объект questions
+let question4 = q_1; // используя шаблон
+${globalVars.codeTextTagClose}
+${globalVars.textTagOpen}Q.
+    number
+    type.
+        QuestionTypeId.
+            WelcomeScreen
+            Information
+            Text
+            Phone
+            Email
+            DateTime
+            Numeric
+            SingleChoice
+            MultipleChoice
+            Dropdown_SingleChoice
+            Dropdown_MultipleChoice
+            Ranking
+            Rating
+            Slider
+            ClickTest_Text
+            Table_Text
+            Table_Numeric
+            Table_SingleChoice
+            Table_MultipleChoice
+            Table_Rating
+            MaxDiff
+    text
+    textLocalizations
+    plainText
+    comment
+    commentLocalizations
+    plainComment
+    condition
+    settings.
+        randomizeAnswers
+        swapRowsAndColumns
+        exportInCategoricalMode
+        skipExport
+        disableAudioRecording
+        keepExportOV
+        exportInAlternativeFlagsMode
+        allowFractionalNumbers
+        showAutoAnswerProgress
+        rotateAnswers
+        verticalTextInColumnHeaders
+        customValidation
+        enableAudioRecording
+        forceSilentAudioRecording
+        enableGPS
+        enableGeoCoder
+        useDatePicker
+        useTimePicker
+        enableFileAttachments
+        enableSignatureAttachment
+        allowEmptySignature
+        showRowsOneByOne
+        enableSearchField
+        disableHidingOpenValue
+        showGroupsWithCollapsedView
+        grouppingAllNotRequired
+        highlightTrackBeforeSliderHandle
+        canSkip
+        useBarcodeScanner1D
+        useBarcodeScanner2D
+        hideGoBackButton
+        hideGoFirstButton
+        hideInterruptButton
+        autoSubmitSingleChoice
+        disableClipboardPaste
+    minAnswerCount
+    maxAnswerCount
+    columnCount
+    textLineCount
+    openValueNum
+    openValueInt
+    openValueTxt
+    isAnswered
+    outputColumnTemplate
+    outputColumnTemplateOVN
+    outputColumnTemplateOVT
+    answer
+    answers
+    rows
+    columns
+    categoricalIndexes
+    reset()
+    image
+    imageUrl
+    imagePlacement
+    allowedAttachmentsType
+    minAttachmentsCount
+    maxAttachmentsCount
+    attachmentsCount
+    latitude
+    longitude
+    address
+    autoAnswerSec
+    autoAnswerCode
+    answerNumberFrom
+    answerNumberTo
+    icon
+    leftTitle
+    rightTitle
+    leftTitleLocalizations
+    rightTitleLocalizations
+    sourceAnswerCode
+    sourceQuestionNumber
+    currentIterationQuestions
+    answersSumControlMode
+    answersSumControlTarget
+    answersSumControlUnit
+    getClickedRegionCodes()
+    hideRegionsWithCodes(code, codes)
+    showRegionsWithCodes(code, codes)
+    hasClickByRegion(code)
+${globalVars.textTagClose}
+`;
+
+let PropQuestion = {
+    id: "PropQuestion",
+    name: "Question",
+    sub: "",
+    descr: data_descr
+};
+
+export { PropQuestion };

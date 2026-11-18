@@ -1,0 +1,164 @@
+//Functions
+import { dataFunctions } from "./pages/Func/Functions.js";
+import { ClearTestInfoFunc } from "./pages/Func/ClearTestInfoFunc.js";
+import { ShuffleArr } from "./pages/Func/ShuffleArr.js";
+import { AnswerExistsOnly } from "./pages/Func/AnswerExistsOnly.js";
+import { getArrOtherCodes } from "./pages/Func/getArrOtherCodes.js";
+
+//Lib
+import { SaveAnswers } from "./pages/Lib/SaveAnswers.js";
+import { AgeRecode } from "./pages/Lib/AgeRecode.js";
+import { CityRecode } from "./pages/Lib/CityRecode.js";
+import { ShowPrevChecked } from "./pages/Lib/ShowPrevChecked.js";
+import { CopyAnswers } from "./pages/Lib/CopyAnswers.js";
+import { CheckAnswers } from "./pages/Lib/CheckAnswers.js";
+import { ShowOnlyCodesByCode } from "./pages/Lib/ShowOnlyCodesByCode.js";
+import { VarSubstitution } from "./pages/Lib/VarSubstitution.js";
+import { AddImages } from "./pages/Lib/AddImages.js";
+import { RotationAnswers } from "./pages/Lib/RotationAnswers.js";
+import { ResultsOfScriptExec } from "./pages/Lib/ResultsOfScriptExec.js";
+import { RepeatQuestions } from "./pages/Lib/RepeatQuestions.js";
+import { AutoAnswer } from "./pages/Lib/AutoAnswer.js";
+import { ShowHideAnswers } from "./pages/Lib/ShowHideAnswers.js";
+import { ValidationAnswersPage } from "./pages/Lib/ValidationAnswers.js";
+import { CheckRandAnswer } from "./pages/Lib/CheckRandAnswer.js";
+import { GenerateRandNum } from "./pages/Lib/GenerateRandNum.js";
+import { ShownRowsInTable } from "./pages/Lib/ShownRowsInTable.js";
+import { ShowRowsConditions } from "./pages/Lib/ShowRowsConditions.js";
+import { CodedGroups } from "./pages/Lib/CodedGroups.js";
+import { SurveyQuality } from "./pages/Lib/SurveyQuality.js";
+import { OpenTextsAndZO } from "./pages/Lib/OpenTextsAndZO.js";
+import { OpenNumAndSum } from "./pages/Lib/OpenNumAndSum.js";
+import { CheckExist } from "./pages/Lib/CheckExist.js";
+import { Attachments } from "./pages/Lib/Attachments.js";
+import { OptionalAnswer } from "./pages/Lib/OptionalAnswer.js";
+import { DateAndTime } from "./pages/Lib/DateAndTime.js";
+import { SomeConditions } from "./pages/Lib/SomeConditions.js";
+import { Recode } from "./pages/Lib/Recode.js";
+import { CheckInAndNotCheck } from "./pages/Lib/CheckInAndNotCheck.js";
+import { GetPrior } from "./pages/Lib/GetPrior.js";
+
+//SurveySystem
+import { SurveyTestingPage } from "./pages/SSystem/SurveyTesting.js";
+import { CreateQuotasPage } from "./pages/SSystem/CreateQuotas.js";
+import { CreateProject} from "./pages/SSystem/CreateProject.js";
+import { CreateSurvey} from "./pages/SSystem/CreateSurvey.js";
+
+
+//Prop
+import { PropQuestion } from "./pages/Prop/PropQuestion.js";
+import { PropGlobal } from "./pages/Prop/PropGlobal.js";
+import { PropAnswer } from "./pages/Prop/PropAnswer.js";
+import { PropAnswerList } from "./pages/Prop/PropAnswerList.js";
+import { PropRow } from "./pages/Prop/PropRow.js";
+import { PropRowList } from "./pages/Prop/PropRowList.js";
+import { PropColumn } from "./pages/Prop/PropColumn.js";
+import { PropColumnList } from "./pages/Prop/PropColumnList.js";
+
+//JS
+import { ArrayMethods } from "./pages/JSstandard/ArrayMethods.js";
+import { ArrToString } from "./pages/JSstandard/ArrToString.js";
+import { FindElemInArr } from "./pages/JSstandard/FindElemInArr.js";
+import { RandomNum } from "./pages/JSstandard/RandomNum.js";
+import { SliceArr } from "./pages/JSstandard/SliceArr.js";
+import { SomeArr } from "./pages/JSstandard/SomeArr.js";
+import { SpliceArr } from "./pages/JSstandard/SpliceArr.js";
+import { FindAllElemsInArr } from "./pages/JSstandard/FindAllElemsInArr.js";
+import { IntersectionOfArr } from "./pages/JSstandard/IntersectionOfArr.js";
+import { ArrayIterations } from "./pages/JSstandard/ArrayIterations.js";
+import { ConcatArr } from "./pages/JSstandard/ConcatArr.js";
+import { GetDateAndDay } from "./pages/JSstandard/GetDateAndDay.js";
+import { BreakCont } from "./pages/JSstandard/BreakCont.js";
+import { ArraySubtraction } from "./pages/JSstandard/ArraySubtraction.js";
+import { MaxArray } from "./pages/JSstandard/MaxArray.js";
+import { TypesConvert } from "./pages/JSstandard/TypesConvert.js";
+
+const FunctionsData = [
+    dataFunctions,
+    AnswerExistsOnly,
+    ClearTestInfoFunc,
+    ShuffleArr,
+    getArrOtherCodes
+];
+
+const LibData = [
+    SaveAnswers,
+    AgeRecode,
+    CityRecode,
+    ShowPrevChecked,
+    CopyAnswers,
+    CheckAnswers,
+    ShowHideAnswers,
+    AutoAnswer,
+    ShowOnlyCodesByCode,
+    VarSubstitution,
+    AddImages,
+    RotationAnswers,
+    ResultsOfScriptExec,
+    RepeatQuestions,
+    ...ValidationAnswersPage,
+    CheckRandAnswer,
+    GenerateRandNum,
+    ShownRowsInTable,
+    ShowRowsConditions,
+    CodedGroups,
+    SurveyQuality,
+    OpenTextsAndZO,
+    OpenNumAndSum,
+    CheckExist,
+    Attachments,
+    OptionalAnswer,
+    DateAndTime,
+    SomeConditions,
+    Recode,
+    CheckInAndNotCheck,
+    GetPrior
+];
+
+const PropData = [
+    PropQuestion, 
+    PropGlobal,
+    PropAnswer,
+    PropAnswerList,
+    PropRow,
+    PropRowList,
+    PropColumn,
+    PropColumnList,
+];
+
+const JSstandardData = [
+      ArrayMethods,
+      ArrToString,
+      SliceArr,
+      SomeArr,
+      SpliceArr,
+      FindElemInArr,
+      FindAllElemsInArr,
+      IntersectionOfArr,
+      ArrayIterations,
+      ConcatArr,
+      GetDateAndDay,
+      RandomNum,
+      BreakCont,
+      ArraySubtraction,
+      MaxArray,
+      TypesConvert
+];
+
+const SurveySystem = [
+    ...SurveyTestingPage,
+    CreateProject,
+    CreateSurvey,
+    ...CreateQuotasPage,
+];
+
+
+const allPagesData = [
+    ...FunctionsData,
+    ...LibData,
+    ...PropData,
+    ...SurveySystem,
+    ...JSstandardData
+];
+
+export { allPagesData }
